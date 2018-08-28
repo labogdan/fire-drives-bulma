@@ -1,0 +1,302 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+
+$column-margin: 2rem;
+
+$default-background: #424247;
+
+// drives colors
+$orange: #E17400;
+$grey: #D8D8D8;
+$light-gray: #F0F0F0;
+
+// z-index
+$z-back: 0;
+$z-greater: $z-back + 1;
+
+// overrides
+$footer-background-color: #555559;
+
+$card-background-color: $light-gray;
+
+$column-margin: 1rem;
+
+//$column-gap: 3rem;
+
+@import "../node_modules/bulma/bulma";
+
+// helpers
+
+a.navbar-item, a.navbar-link {
+  transition: color 0.5s;
+}
+
+
+a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+  color: $orange;
+}
+
+.columns {
+  .column {
+    &.add-margin {
+      margin-left: $column-margin;
+      margin-right: $column-margin;
+    }
+    &.no-padding {
+      padding: 0;
+    }
+  }
+}
+
+.top {
+  &.margin {
+    &.two {
+      margin-top: 2rem;
+    }
+    &.four {
+      margin-top: 4rem;
+    }
+    &.six {
+      margin-top: 6rem;
+    }
+  }
+  &.padding {
+    &.least {
+      padding-top: 1.5rem;
+    }
+    &.two {
+      padding-top: 2rem;
+    }
+    &.four {
+      padding-top: 4rem;
+    }
+    &.six {
+      padding-top: 6rem;
+    }
+  }
+}
+
+.top-margin-large {
+  margin-top: 7rem;
+}
+
+.top-margin {
+  margin-top: 30px;
+}
+.top-margin-15 {
+  margin-top: 15px;
+}
+
+.container {
+  .columns {
+    margin-left: $column-margin;
+    margin-right: $column-margin;
+  }
+}
+
+.orange {
+  color: $orange;
+}
+// header
+
+.section.header {
+  padding: 1rem 4.5rem 1rem 4.5rem;
+}
+.header {
+  background: $default-background;
+}
+
+section.svg svg {
+  //position: absolute;
+  z-index: $z-back;
+  //top: 10px;
+}
+
+.up100 {
+  margin-top: -100px;
+}
+
+.up250 {
+  margin-top: -250px;
+}
+
+section {
+  color: $white;
+}
+
+.navbar {
+  background: $default-background;
+  z-index: $z-greater;
+}
+
+.navbar-end{
+  & .navbar-item {
+    text-transform: uppercase;
+    color: #fff;
+  }
+  &:first-child{
+    .navbar-item {
+      text-transform: none;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-menu.double {
+    display: block;
+  }
+  section.svg {
+    z-index: $z-back;
+  }
+}
+
+// hero
+
+.body-bg-image {
+  background:url("https://picsum.photos/1600/?random");
+  background-size: cover;
+  min-height:700px;
+}
+
+.opaque-bg {
+  background: rgba(66, 66, 71, 0.25);
+
+  &.column {
+    margin-top: 8rem;
+    padding: 3rem;
+  }
+}
+
+.title {
+  color: white;
+  sup {
+    font-size: .5em;
+  }
+}
+.input {
+  border-radius: 20px;
+}
+
+
+section.toughest.applications {
+  color: $black;
+
+}
+/*
+.drbox {
+  $total-height: 600px;
+  $top-height: 300px;
+  $bottom-height: $total-height - $top-height;
+  border: 3px solid $grey;
+  min-height: $total-height;;
+  .top {
+      height: $top-height;
+      &.mod1{
+        background:url("https://picsum.photos/300/?random");
+        background-size: cover;
+      }
+      &.mod2{
+        background:url("https://picsum.photos/300/?random");
+        background-size: cover;
+      }
+      &.mod3{
+        background:url("https://picsum.photos/300/?random");
+        background-size: cover;
+      }
+  }
+  .bottom {
+    background: $light-gray;
+    padding: .75rem;
+    height: $bottom-height;
+  }
+}
+
+*/
+
+.home-page-background-image {
+  background:url("https://picsum.photos/1600/?random");
+  background-size: cover;
+  min-height:500px;
+}
+
+.card.clear-background {
+  background: transparent;
+  color: $white;
+  box-shadow: none;
+}
+.card.darker {
+  background: $default-background;
+  color: $white;
+}
+
+.news.module:not(:first-child) {
+  margin-top: 30px;
+}
+
+
+// footer
+
+footer .navbar{
+  background: $footer-background-color;
+}
+
+.footer {
+  padding: 1rem 4.5rem 1rem 4.5rem;
+
+  &.dark {
+    background-color: $default-background;
+    color: $white;
+  }
+}
+
+// footer: font awesome styles
+.fa-stack {
+  margin-left: .5em;
+}
+.fa-1-5x {
+  font-size: 1.4em;
+}
+
+
+
+
+
+
+
+
+.swoosh::before {
+  content: '';
+  display: block;
+  width: 150%;
+  height: 400px;
+  background: transparent;
+  border-bottom: solid 4rem white;
+  position: absolute;
+  bottom: 17rem;
+  left: -25%;
+  border-radius: 0 0 40% 40%;
+}
