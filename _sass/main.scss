@@ -49,15 +49,66 @@ $column-margin: 1rem;
 
 @import "../node_modules/bulma/bulma";
 
-// helpers
+// breakpoints
 
-a.navbar-item, a.navbar-link {
-  transition: color 0.5s;
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+  .center-mobile {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .home-page-background-image {
+
+    background: $default-background !important;
+    min-height:500px;
+  }
 }
 
 
+// transitions / animations
+
+$animation-speed: 0.25s;
+
+.zoom {
+  transition: transform $animation-speed;
+}
+.zoom:hover {
+  transform: scale(1.025);
+}
+
+
+a.navbar-item, a.navbar-link {
+  transition: color $animation-speed;
+}
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
   color: $orange;
+}
+
+.hide {
+  overflow: hidden;
+  height: 40px;
+  transition: height $animation-speed*2;
+}
+
+.hide.make-hidden {
+  height: 0;
+}
+
+// helpers
+
+.is-fixed-top {
+  top: 0;
+  width:100%;
+  position: fixed;
+  z-index: 30;
+}
+
+.has-fixed-top {
+  margin-top: 40px;
+}
+.hidden {
+  display: none;
 }
 
 .columns {
@@ -125,6 +176,7 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 
 .section.header {
   padding: 1rem 4.5rem 1rem 4.5rem;
+  z-index: 40 !important;
 }
 .header {
   background: $default-background;
@@ -238,7 +290,9 @@ section.toughest.applications {
 */
 
 .home-page-background-image {
-  background:url("https://picsum.photos/1600/?random");
+
+  background: linear-gradient(to top, $default-background, transparent 60%, $white 98%),
+              url("https://picsum.photos/1600/?random");
   background-size: cover;
   min-height:500px;
 }
