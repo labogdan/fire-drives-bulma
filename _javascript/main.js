@@ -4,35 +4,38 @@ class Sticky {
       this.$elem = $(selector);
       this.$hide = this.$elem.find(".hide");
       this.offset = this.$elem.find(".show").offset();
-      console.log("show offset: %o",this.offset.top);
-      console.log(this.$hide.height());
+      this.$logo = this.$elem.find(".navbar-brand");
+      console.log(this.$logo);
     }
 
     positionOnScroll() {
       let scrollPos = $(window).scrollTop();
 
       if (scrollPos >= this.offset.top) {
-        //this.$elem.addClass("is-fixed-top");
+        if ($(window).width() > 768) {
+          this.$logo.addClass("shrink");
+        }
+        this.$elem.addClass("fixed");
         this.$hide.addClass("make-hidden");
-        //$("body").addClass("has-fixed-top");
       } else {
-        //this.$elem.removeClass("is-fixed-top");
+        this.$elem.removeClass("fixed");
+        this.$logo.removeClass("shrink");
         this.$hide.removeClass("make-hidden");
-        //$("body").removeClass("has-fixed-top");
       }
-
     }
 }
 
 class HamburgerMenu {
   constructor(selector) {
     let elem = $(".navbar-burger"),
-        menu = $(".navbar-menu");
+        menu = $(".navbar-menu"),
+        logo = $(".navbar-brand");
 
-      elem.on("click", function() {
-        elem.toggleClass("is-active");
-          menu.toggleClass("is-active");
-      });
+    elem.on("click", function() {
+      elem.toggleClass("is-active");
+      menu.toggleClass("is-active");
+      logo.toggleClass("hidden");
+    });
 
   }
 }
@@ -41,8 +44,6 @@ class HamburgerMenu {
 $(document).ready(function() {
 
   var burger = new HamburgerMenu();
-
-   $(".section.header").sticky({topSpacing:0});
 
   var sticky = new Sticky(".section.header");
   $(window).on("scroll", function () {

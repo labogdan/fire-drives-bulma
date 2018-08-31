@@ -49,21 +49,6 @@ $column-margin: 1rem;
 
 @import "../node_modules/bulma/bulma";
 
-// breakpoints
-
-@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
-  .center-mobile {
-    justify-content: center;
-  }
-}
-
-@media screen and (max-width: $tablet - 1px) {
-  .home-page-background-image {
-
-    background: $default-background !important;
-    min-height:500px;
-  }
-}
 
 
 // transitions / animations
@@ -77,12 +62,28 @@ $animation-speed: 0.25s;
   transform: scale(1.025);
 }
 
+.navbar-brand {
+  transition: transform $animation-speed*2;
+}
+
+.shrink {
+  transform: scale(0.75);
+}
 
 a.navbar-item, a.navbar-link {
   transition: color $animation-speed;
 }
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
   color: $orange;
+}
+
+.navbar-menu.is-active{
+  .hide {
+    height: auto;
+  }
+  a.navbar-item {
+    color: $orange;
+  }
 }
 
 .hide {
@@ -108,7 +109,7 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
   margin-top: 40px;
 }
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .columns {
@@ -175,25 +176,29 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 // header
 
 .section.header {
-  padding: 1rem 4.5rem 1rem 4.5rem;
+  padding-top: 1rem;
+  padding-left: 4.5rem;
+  padding-bottom: 1rem;
+  padding-right: 4.5rem;
+  transition: padding $animation-speed*2;
   z-index: 40 !important;
+  &.fixed {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
+
 .header {
   background: $default-background;
 }
 
-section.svg svg {
-  //position: absolute;
-  z-index: $z-back;
-  //top: 10px;
-}
 
 .up100 {
   margin-top: -100px;
 }
 
 .up250 {
-  margin-top: -250px;
+  margin-top: -16rem;
 }
 
 section {
@@ -219,20 +224,58 @@ section {
 
 @media screen and (min-width: 1024px) {
   .navbar-menu.double {
-    display: block;
+    //display: block;
+    flex-wrap: wrap;
+    max-width:700px;
   }
   section.svg {
     z-index: $z-back;
   }
 }
 
-// hero
+
+nav.breadcrumb {
+  margin-bottom: 0 !important;
+  ul {
+    margin-left: 0;
+    margin-top: 0;
+  }
+}
 
 .body-bg-image {
-  background:url("https://picsum.photos/1600/?random");
-  background-size: cover;
-  min-height:700px;
+  .card {
+    box-shadow: none;
+    background: transparent;
+    color: $white;
+    .breadcrumb a, .breadcrumb li.is-active a {
+      color: $white;
+    }
+    h1 {
+      color: $white;
+      margin-top: 0;
+    }
+  }
 }
+
+// hero and page-specific
+
+.index {
+  .body-bg-image {
+    background:url("https://picsum.photos/1600/?random");
+    background-size: cover;
+    min-height:700px;
+  }
+}
+
+.products {
+  .body-bg-image {
+    background:url("https://picsum.photos/1600/?image=1044");
+    background-size: cover;
+    min-height:500px;
+  }
+}
+
+
 
 .opaque-bg {
   background: rgba(66, 66, 71, 0.25);
@@ -258,44 +301,22 @@ section.toughest.applications {
   color: $black;
 
 }
-/*
-.drbox {
-  $total-height: 600px;
-  $top-height: 300px;
-  $bottom-height: $total-height - $top-height;
-  border: 3px solid $grey;
-  min-height: $total-height;;
-  .top {
-      height: $top-height;
-      &.mod1{
-        background:url("https://picsum.photos/300/?random");
-        background-size: cover;
-      }
-      &.mod2{
-        background:url("https://picsum.photos/300/?random");
-        background-size: cover;
-      }
-      &.mod3{
-        background:url("https://picsum.photos/300/?random");
-        background-size: cover;
-      }
-  }
-  .bottom {
-    background: $light-gray;
-    padding: .75rem;
-    height: $bottom-height;
-  }
-}
 
-*/
 
 .home-page-background-image {
-
   background: linear-gradient(to top, $default-background, transparent 60%, $white 98%),
               url("https://picsum.photos/1600/?random");
   background-size: cover;
   min-height:500px;
 }
+
+.default-background-image {
+  background: linear-gradient(to top, transparent, $white 98%),
+              url("https://picsum.photos/1600/?random");
+  background-size: cover;
+  min-height:500px;
+}
+
 
 .card.clear-background {
   background: transparent;
@@ -307,6 +328,14 @@ section.toughest.applications {
   color: $white;
 }
 
+.card {
+  &.top-margin-large {
+    margin-top: 14rem;
+  }
+  &.top-margin-small {
+    margin-top: 5rem;
+  }
+}
 .news.module:not(:first-child) {
   margin-top: 30px;
 }
@@ -339,6 +368,60 @@ footer .navbar{
 
 
 
+// breakpoints
+
+@media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+.up250 {
+  margin-top: -14rem;
+}
+  .center-mobile {
+    justify-content: center;
+  }
+  .section.header {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: $tablet - 1px) {
+  .up250 {
+    //margin-top: -12rem;
+    display: none;
+  }
+  .home-page-background-image {
+    background: $default-background !important;
+    min-height:500px;
+  }
+
+  a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
+    background: $default-background;
+  }
+
+  .section.header {
+    padding-top: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+  .up100 {
+    margin-top: -38px;
+  }
+  .navbar-brand {
+    display: block;
+    float: left;
+  }
+  .card {
+    &.top-margin-large {
+      margin-top: 8rem;
+    }
+    &.top-margin-small {
+      margin-top: 0;
+    }
+  }
+
+}
 
 
 
