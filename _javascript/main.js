@@ -13,7 +13,7 @@ class Sticky {
 
       if (scrollPos >= this.offset.top) {
         if ($(window).width() > 768) {
-          this.$logo.addClass("shrink");
+          //this.$logo.addClass("shrink");
         }
         this.$elem.addClass("fixed");
         this.$hide.addClass("make-hidden");
@@ -45,7 +45,7 @@ $(document).ready(function() {
 
   var burger = new HamburgerMenu();
 
-  var sticky = new Sticky(".section.header");
+  var sticky = new Sticky("section.header");
   $(window).on("scroll", function () {
     sticky.positionOnScroll();
   });

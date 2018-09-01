@@ -66,6 +66,8 @@ $animation-speed: 0.25s;
   transition: transform $animation-speed*2;
 }
 
+
+
 .shrink {
   transform: scale(0.75);
 }
@@ -75,6 +77,12 @@ a.navbar-item, a.navbar-link {
 }
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
   color: $orange;
+}
+
+.navbar-menu {
+  .navbar-item {
+    padding: 0.5rem 0.5rem;
+  }
 }
 
 .navbar-menu.is-active{
@@ -106,7 +114,7 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 }
 
 .has-fixed-top {
-  margin-top: 40px;
+  //margin-top: 40px;
 }
 .hidden {
   display: none !important;
@@ -175,11 +183,11 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 }
 // header
 
-.section.header {
+section.header {
   padding-top: 1rem;
-  padding-left: 4.5rem;
-  padding-bottom: 1rem;
-  padding-right: 4.5rem;
+  //padding-left: 4.5rem;
+  //padding-bottom: 1rem;
+  //padding-right: 4.5rem;
   transition: padding $animation-speed*2;
   z-index: 40 !important;
   &.fixed {
@@ -211,11 +219,15 @@ section {
 }
 
 .navbar-end{
+  .navbar-item:last-of-type {
+    padding: 0;
+  }
+
   & .navbar-item {
     text-transform: uppercase;
     color: #fff;
   }
-  &:first-child{
+  &:first-child {
     .navbar-item {
       text-transform: none;
     }
@@ -226,7 +238,7 @@ section {
   .navbar-menu.double {
     //display: block;
     flex-wrap: wrap;
-    max-width:700px;
+    max-width:665px;
   }
   section.svg {
     z-index: $z-back;
@@ -244,6 +256,11 @@ nav.breadcrumb {
 
 .body-bg-image {
   .card {
+    &.opaque-bg {
+      background: rgba(66, 66, 71, 0.45);
+      margin-top: 8rem;
+      padding: 3rem;
+    }
     box-shadow: none;
     background: transparent;
     color: $white;
@@ -276,15 +293,6 @@ nav.breadcrumb {
 }
 
 
-
-.opaque-bg {
-  background: rgba(66, 66, 71, 0.25);
-
-  &.column {
-    margin-top: 8rem;
-    padding: 3rem;
-  }
-}
 
 .title {
   color: white;
@@ -322,6 +330,9 @@ section.toughest.applications {
   background: transparent;
   color: $white;
   box-shadow: none;
+  .card-content {
+    padding: 0;
+  }
 }
 .card.darker {
   background: $default-background;
@@ -342,6 +353,10 @@ section.toughest.applications {
 
 
 // footer
+
+.fa-stack:first-of-type {
+  margin-left: 0;
+}
 
 footer .navbar{
   background: $footer-background-color;
@@ -369,6 +384,12 @@ footer .navbar{
 
 
 // breakpoints
+
+@media screen and (min-width: $widescreen) {
+  .navbar-menu .navbar-item {
+    padding: 0.5rem 1rem;
+  }
+}
 
 @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
 .up250 {
