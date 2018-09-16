@@ -1,30 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Drives Chains</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-    <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
-  </head>
+
+  ${require('./_head.html')}
+
   <body class="index">
 
     ${require('./_header.html')}
 
     <section class="body-bg-image up100">
       <div class="container">
-        <div class="columns center-mobile">
-          <div class="column is-6">
+        <div class="columns center-mobile center-tablet">
+          <div class="column is-6 is-8-desktop is-8-tablet">
             <div class="card opaque-bg">
               <div class="card-content">
                 <div class="content has-text-left">
                   <h1 class="title is-1">Drives<sup>&reg;</sup> Chain</h1>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis, mauris viverra scelerisque lacinia,
-                    urna elit rhoncus turpis, non blandit turpis ex quis felis. Aenean hendrerit nunc non lectus hendrerit finibus.
-                    Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
+                    urna elit rhoncus turpis, non blandit turpis ex quis felis.
                   </p>
                   <br />
                   <div class="field">
@@ -44,7 +37,7 @@
     </section>
 
   <section class="svg is-flex-desktop-only up250">
-    <svg width="100%" height="322px" viewBox="0 0 1600 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <!--  <svg width="100%" height="322px" viewBox="0 0 1600 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <desc>Created with Sketch.</desc>
         <defs></defs>
         <g id="Drives-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -54,11 +47,27 @@
                 </g>
             </g>
         </g>
-    </svg>
+    </svg>-->
+
+<!--<svg width="100%" height="322px" viewBox="0 0 1525 290" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Drives-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Home" transform="translate(0.000000, -551.000000)" fill="#FFFFFF">
+            <path d="M-75,842.964844 L1525,792.964844 L1525,551 C1196.987,665.830757 930.320332,736.932319 725,764.304688 C519.679668,791.677056 253.013001,789.49867 -75,757.769531 L-75,842.964844 Z" id="Path-6"></path>
+        </g>
+    </g>
+</svg>-->
+
+  <img src="svg/bottom-swoosh.svg" />
+
+
+
   </section>
     <section class="toughest applications">
-      <div class="container has-text-centered">
-        <span class="is-size-2 orange">Drives Chains</span> <span class="is-size-2">For Your Toughest Applications</span>
+      <div class="container has-text-centered top-margin-four-mobile">
+        <span class="is-size-2 orange">Drives Chains </span> <span class="is-size-2">For Your Toughest Applications</span>
 
         ${require('./_toughest_chains.html')}
 
@@ -75,31 +84,20 @@
         </div>
       </div>
 
-      <div class="is-size-2 top-margin-large has-text-centered">Featured News and Documents</div>
 
+
+      <div class="columns">
+        <div class="column is-12">
+          <div class="is-size-2 top-margin-large has-text-centered has-text-left-mobile">Featured News and Documents</div>
+        </div>
+      </div>
       <div class="columns top margin two">
         <div class="column is-5">
           <div class="card clear-background">
             <div class="card-content">
               <div class="content has-text-left">
-                <div class="news module">
-                  <div class="orange">News</div>
-                  <div class="is-uppercase">Lorem ipsum dolor sit amet</div>
-                  <p class="top-margin-15">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis, mauris viverra scelerisque lacinia,
-                    urna elit rhoncus turpis, non blandit turpis ex quis felis. Aenean hendrerit nunc non lectus hendrerit finibus.
-                    Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
-                  </p>
-                </div>
-                <div class="news module">
-                  <div class="orange">Event</div>
-                  <div class="is-uppercase">Lorem ipsum dolor sit amet</div>
-                  <p class="top-margin-15">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis, mauris viverra scelerisque lacinia,
-                    urna elit rhoncus turpis, non blandit turpis ex quis felis. Aenean hendrerit nunc non lectus hendrerit finibus.
-                    Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
-                  </p>
-                </div>
+                ${require('./_news_module.html')}
+                ${require('./_event_module.html')}
               </div>
             </div>
           </div>

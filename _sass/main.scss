@@ -17,13 +17,17 @@ $pink: #ff8080;
 $pink-invert: #fff;
 // Update the sans-serif font family
 $family-sans-serif: "Helvetica", "Arial", sans-serif;
+$family-primary: 'Lato', "Helvetica", "Arial", sans-serif;
+$size-1: 3.6rem;
+//$size-6: 0.86rem;
+
+
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
 $primary: $pink;
 $primary-invert: $pink-invert;
 
-// 4. Import the rest of Bulma
 
 $column-margin: 2rem;
 
@@ -33,6 +37,9 @@ $default-background: #424247;
 $orange: #E17400;
 $grey: #D8D8D8;
 $light-gray: #F0F0F0;
+$dark-gray: $default-background;
+
+$navbar-burger-color: white;
 
 // z-index
 $z-back: 0;
@@ -47,9 +54,18 @@ $column-margin: 1rem;
 
 //$column-gap: 3rem;
 
+$button-color:	$white;
+$button-background-color:	$orange;
+
+// 4. Import the rest of Bulma
 @import "../node_modules/bulma/bulma";
 
 
+@import "../node_modules/bourbon/core/bourbon";
+
+body {
+  font-size: 1.25rem;
+}
 
 // transitions / animations
 
@@ -73,6 +89,7 @@ $animation-speed: 0.25s;
 }
 
 a.navbar-item, a.navbar-link {
+  font-size: 0.86rem;
   transition: color $animation-speed;
 }
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active {
@@ -104,7 +121,129 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
   height: 0;
 }
 
+
+
+
 // helpers
+.column {
+    &.is-2-3 {
+      @include tablet {
+        flex: none;
+        width: 25%;
+      }
+      @include desktop {
+        flex: none;
+        width: 20%;
+      }
+    }
+    &.is-7-4 {
+      @include tablet {
+        flex: none;
+        width: 25%;
+      }
+      @include desktop {
+        flex: none;
+        width: 14%;
+      }
+    }
+}
+
+.slick-arrow {
+  top: calc(50% - 21px);
+  position: absolute;
+  z-index: 40;
+  &.left {
+    left: -32px;
+  }
+  &.right {
+    right: -32px;
+  }
+}
+
+a.button {
+  &.timeline {
+    border: none;
+    background: #424247;
+    transition: color $animation-speed;
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+.time-item {
+  transition: color $animation-speed;
+  &:hover {
+    color: $orange;
+  }
+}
+
+
+.orange-text {
+  color: $orange;
+}
+
+.orange-link {
+  color: $orange;
+  font-size: 1rem;
+}
+
+.text-block {
+  p {
+    padding-bottom: 2rem;
+    border-bottom: 1px gray solid;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px gray solid;
+}
+
+.number-circle {
+  float: left;
+  width: 40px;
+  height: 40px;
+  margin-left: -60px;
+  border-radius: 50%;
+  padding-top: 4px;
+  color: $white;
+  background: $dark-gray;
+}
+
+table.table {
+  thead {
+    background: $default-background;
+    th {
+      color: $white;
+    }
+  }
+}
+
+.no-bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+li {
+  margin-bottom: -0.5rem;
+  padding-left: 1em;
+  text-indent: -0.7em;
+}
+
+li::before {
+  content: ".";
+  margin-right: .8rem;
+  color: $orange;
+  font-size: 5rem;
+  line-height: 0;
+}
+
+.content li + li {
+    margin-top: -0.25em;
+}
+
 
 .is-fixed-top {
   top: 0;
@@ -132,8 +271,16 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
   }
 }
 
+// semantic margins
+
 .top {
   &.margin {
+    &.half {
+      margin-top: 0.5rem;
+    }
+    &.one {
+      margin-top: 1rem;
+    }
     &.two {
       margin-top: 2rem;
     }
@@ -145,6 +292,9 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
     }
   }
   &.padding {
+    &.footer-pad {
+      padding-top: 0.5rem;
+    }
     &.least {
       padding-top: 1.5rem;
     }
@@ -159,9 +309,105 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
     }
   }
 }
+.bottom {
+  &.margin {
+    &.two {
+      margin-bottom: 2rem;
+    }
+    &.four {
+      margin-bottom: 4rem;
+    }
+    &.six {
+      margin-bottom: 6rem;
+    }
+  }
+  &.padding {
+    &.least {
+      padding-bottom: 1.5rem;
+    }
+    &.two {
+      padding-bottom: 2rem;
+    }
+    &.four {
+      padding-bottom: 4rem;
+    }
+    &.six {
+      padding-bottom: 6rem;
+    }
+  }
+}
+.left {
+  &.margin {
+    &.two {
+      margin-left: 2rem;
+      &.no-mobile {
+        @include mobile {
+          margin-left: 0;
+        }
+      }
+    }
+    &.four {
+      margin-left: 4rem;
+    }
+    &.six {
+      margin-left: 6rem;
+    }
+  }
+  &.padding {
+    &.least {
+      padding-left: 1.5rem;
+    }
+    &.two {
+      padding-left: 2rem;
+    }
+    &.four {
+      padding-left: 4rem;
+    }
+    &.six {
+      padding-left: 6rem;
+    }
+  }
+}
+
+.right {
+  &.margin {
+    &.two {
+      margin-right: 2rem;
+      &.no-mobile {
+        @include mobile {
+          margin-left: 0;
+        }
+      }
+    }
+    &.four {
+      margin-right: 4rem;
+    }
+    &.six {
+      margin-right: 6rem;
+    }
+  }
+  &.padding {
+    &.least {
+      padding-right: 1.5rem;
+    }
+    &.two {
+      padding-right: 2rem;
+    }
+    &.four {
+      padding-right: 4rem;
+    }
+    &.six {
+      padding-right: 6rem;
+    }
+  }
+}
 
 .top-margin-large {
   margin-top: 7rem;
+}
+
+.top-margin-medium {
+  margin-top: 5rem;
 }
 
 .top-margin {
@@ -209,14 +455,51 @@ section.header {
   margin-top: -16rem;
 }
 
+.svg {
+  &.bg-swoosh {
+    background: url("/svg/header-swoosh.svg");
+    background-size: 1600px 163px;
+    width:100%;
+    height: 163px;
+    background-position: center top;
+    z-index: 30;
+    position: relative;
+  }
+}
+
+
 section {
   color: $white;
+  &.gray-bg {
+    background: $light-gray;
+  }
+  &.dark-gray-bg {
+    background: $dark-gray;
+  }
 }
 
 .navbar {
   background: $default-background;
   z-index: $z-greater;
 }
+
+
+.navbar-burger span {
+  height: 4px;
+  background-color: $white;
+  width: 32px;
+}
+
+.navbar-burger span:nth-child(1) {
+    top: calc(50% - 8px);
+}
+.navbar-burger span:nth-child(2) {
+    top: calc(50% - -2px);
+}
+.navbar-burger span:nth-child(3) {
+    top: calc(50% + 12px);
+}
+
 
 .navbar-end{
   .navbar-item:last-of-type {
@@ -242,6 +525,7 @@ section {
   }
   section.svg {
     z-index: $z-back;
+    overflow: hidden;
   }
 }
 
@@ -251,7 +535,25 @@ nav.breadcrumb {
   ul {
     margin-left: 0;
     margin-top: 0;
+    li {
+      margin-left: 0;
+      padding-left: 0; 
+    }
   }
+}
+
+
+.control .icon {
+  color: $orange !important;
+}
+
+.card.transparent {
+  box-shadow: none;
+  background: transparent;
+}
+
+.card.locations {
+  border-bottom: 1px solid $dark-gray;
 }
 
 .body-bg-image {
@@ -278,7 +580,7 @@ nav.breadcrumb {
 
 .index {
   .body-bg-image {
-    background:url("https://picsum.photos/1600/?random");
+    background: url("https://picsum.photos/1600/?random");
     background-size: cover;
     min-height:700px;
   }
@@ -286,7 +588,7 @@ nav.breadcrumb {
 
 .products {
   .body-bg-image {
-    background:url("https://picsum.photos/1600/?image=1044");
+    background: url("https://picsum.photos/1600/?image=1044");
     background-size: cover;
     min-height:500px;
   }
@@ -310,9 +612,21 @@ section.toughest.applications {
 
 }
 
+.gray-heading {
+  background: $dark-gray;
+  color: $white;
+  font-size: 1.5rem;
+}
+
+.map {
+  background: url("/images/map-mock.png");
+  background-size: cover;
+  width:100%;
+  min-height:500px;
+}
 
 .home-page-background-image {
-  background: linear-gradient(to top, $default-background, transparent 60%, $white 98%),
+  background: linear-gradient(to top, $default-background 15%, transparent 75%, $white 98%),
               url("https://picsum.photos/1600/?random");
   background-size: cover;
   min-height:500px;
@@ -323,47 +637,179 @@ section.toughest.applications {
               url("https://picsum.photos/1600/?random");
   background-size: cover;
   min-height:500px;
-}
-
-
-.card.clear-background {
-  background: transparent;
-  color: $white;
-  box-shadow: none;
-  .card-content {
-    padding: 0;
+  @include mobile {
+    background: linear-gradient(to top, $default-background 50%, $white 98%);
   }
 }
-.card.darker {
-  background: $default-background;
-  color: $white;
+
+@mixin backgroundImageGradient($url) {
+  background: linear-gradient(to top, transparent 60%, $white 98%),
+              url($url);
+  background-size: cover;
+  min-height:500px;
+}
+
+.world-bg {
+  background: url("/images/iStock-910410684.png");
+  background-size: cover;
+  min-height:500px;
+}
+
+.resources-bg {
+  @include backgroundImageGradient("/images/resources-bg.png")
+}
+
+.markets-bg {
+  @include backgroundImageGradient("/images/TKR13090298.png")
+}
+
+.about-bg {
+  @include backgroundImageGradient("/images/TKR16050054.png")
+}
+
+.about-bg-2 {
+  @include backgroundImageGradient("/images/TimkenCafeteriaBg.png")
+}
+
+
+nav .level-item a.link {
+  color: $black;
+  transition: color $animation-speed;
+  &:hover {
+    color: $orange;
+  }
+}
+
+.justify-left {
+  justify-content:flex-start;
 }
 
 .card {
+  &.clear-background {
+    background: transparent;
+    color: $white;
+    box-shadow: none;
+    .card-content {
+      padding: 0 !important;
+    }
+  }
+  &.darker {
+    background: $default-background;
+    color: $white;
+    @include mobile {
+      box-shadow: none;
+    }
+    .columns {
+      @include mobile {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+    .column {
+      @include mobile {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    .card-content {
+      &.more-padding {
+      padding: 4rem;
+      }
+      padding: 4rem;
+      @include mobile {
+        padding: 0;
+      }
+      @include tablet {
+        padding: 1.5rem;
+      }
+      @include desktop {
+        padding: 4rem;
+      }
+    }
+  }
   &.top-margin-large {
     margin-top: 14rem;
   }
   &.top-margin-small {
     margin-top: 5rem;
   }
+  &.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .card-image.equal-height {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin-bottom:20px;
+  }
 }
+
+
 .news.module:not(:first-child) {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 
 // footer
 
+section:last-of-type {
+  padding-bottom: 8rem;
+}
+
 .fa-stack:first-of-type {
   margin-left: 0;
 }
 
-footer .navbar{
-  background: $footer-background-color;
+footer {
+  font-size: 0.86rem;
+  .navbar{
+    background: $footer-background-color;
+    text-transform: uppercase;
+
+    .navbar-left {
+        align-items: stretch;
+        display: flex;
+        flex-shrink: 0;
+        min-height: 3.25rem;
+        @include tablet {
+          display: block;
+        }
+        @include mobile {
+          display: block;
+        }
+    }
+    .navbar-right {
+        align-items: stretch;
+        display: block;
+        flex-shrink: 0;
+        flex-grow: 1;
+        @include desktop {
+          display: flex;
+        }
+        .navbar-end {
+          .navbar-item {
+            text-transform: uppercase !important;
+          }
+          .navbar-item:last-of-type {
+            padding: 0.5rem 1rem;
+          }
+          align-items: stretch;
+          display: block;
+          justify-content: flex-end;
+          margin-left: auto;
+          @include desktop {
+            display: flex;
+          }
+        }
+    }
+
+  }
 }
 
 .footer {
-  padding: 1rem 4.5rem 1rem 4.5rem;
+  padding: 1rem 0 1rem 0;
 
   &.dark {
     background-color: $default-background;
@@ -387,7 +833,7 @@ footer .navbar{
 
 @media screen and (min-width: $widescreen) {
   .navbar-menu .navbar-item {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -411,6 +857,9 @@ footer .navbar{
     //margin-top: -12rem;
     display: none;
   }
+  .top-margin-four-mobile {
+    margin-top: 4rem;
+  }
   .home-page-background-image {
     background: $default-background !important;
     min-height:500px;
@@ -426,9 +875,9 @@ footer .navbar{
     padding-bottom: 0;
     padding-right: 0;
   }
-  .up100 {
+  /*.up100 {
     margin-top: -38px;
-  }
+  }*/
   .navbar-brand {
     display: block;
     float: left;
@@ -440,11 +889,21 @@ footer .navbar{
     &.top-margin-small {
       margin-top: 0;
     }
+
   }
 
 }
 
-
+.card-content {
+  &.orange-text {
+    color: $orange;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &.black-text {
+    color: $black;
+  }
+}
 
 .swoosh::before {
   content: '';
