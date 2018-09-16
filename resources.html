@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Drives Chains</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <!--<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>-->
+
+<link rel="stylesheet" type="text/css" href="css/flickity.css"/>
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+  <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+</head>
+
+
+  <body class="products">
+
+    <section class="header is-fixed-top">
+  <div class="container">
+    <div class="columns center">
+      <div class="column is-12">
+        <nav class="navbar is-transparent sticky" role="navigation" aria-label="main navigation">
+          <div class="navbar-brand">
+            <a href="http://localhost:8888" onclick="window.location.href=http://localhost:8888">
+              <object data="svg/drives-logo.svg" type="image/svg+xml"></object>
+            </a>
+          </div>
+
+    <div style="display:flex; flex-grow:1; flex-shrink:1;">
+      <!-- TODO: css-ize this -->
+    </div>
+
+    <div class="navbar-menu double is-visible-tablet">
+
+      <div class="navbar-end hide">
+        <a class="navbar-item" href="/download.html">Download Catalog</a>
+        <a class="navbar-item" href="/pt-place.html">PT Place</a>
+        <a class="navbar-item" id="language-change"><object data="svg/language-icon.svg" type="image/svg+xml"></object></a>
+      </div>
+
+      <div class="navbar-end show">
+        <a class="navbar-item" href="/about.html">About Us</a>
+        <a class="navbar-item" href="/products.html">Products</a>
+        <a class="navbar-item" href="/locations.html">Locations</a>
+        <a class="navbar-item" href="/markets.html">Markets</a>
+        <a class="navbar-item" href="/resources.html">Resources</a>
+        <a class="navbar-item" href="/contact.html">Contact</a>
+      </div>
+    </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </nav>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="svg has-fixed-top bg-swoosh">
+  <!--<svg width="1600px" height="163px" viewBox="0 0 1600 163" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Drives-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+      <g id="01-Home" fill="#424247">
+        <g id="Header-Dark" transform="translate(0.000000, -1.000000)">
+          <path d="M2.95585778e-12,0 L1611,0 L1611,165.585938 C1611,165.585938 1341.90625,115 650,115 C166.953125,115 2.95585778e-12,145.585938 2.95585778e-12,145.585938 L2.95585778e-12,0 Z" id="Rectangle-2"></path>
+        </g>
+      </g>
+    </g>
+  </svg>-->
+</section>
+
+
+  <section class="resources-bg">
+    <div class="container has-text-black">
+
+      <div class="columns">
+        <div class="column is-7">
+          <h1 class="is-size-1 top margin four">
+            Resources Headline
+          </h1>
+        </div>
+        <div class="column is-5">
+          <div class="card transparent">
+            <div class="card-content">
+              <div class="field">
+                <p class="control has-icons-left has-icons-right">
+                  <input class="input" placeholder="Search Drives Products and Resources">
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-search fa-flip-horizontal"></i>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="columns">
+        <div class="column">
+          <nav class="level">
+            <p class="level-item justify-left">
+              <a class="link is-info" href="#apps">Apps & Links</a>
+            </p>
+            <p class="level-item justify-left">
+              <a class="link is-info" href="#tech">Technical Documents</a>
+            </p>
+            <p class="level-item justify-left">
+              <a class="link is-info" href="#literature">Literature</a>
+            </p>
+            <p class="level-item justify-left">
+              <a class="link is-info" href="#whitepapers">Whitepapers & Case Studies</a>
+            </p>
+        </div>
+      </div>
+
+
+      <div class="columns top-margin-large">
+        <div class="column">
+          <h2 id="apps" class="is-size-2">Apps & Links</h2>
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-6">
+          <figure class="image image is-2by1">
+            <img src="/images/TKR12010133.png">
+          </figure>
+          <h3 class="is-size-3 orange">Chain Configurator</h3>
+          <p>
+            Morbi venenatis, mauris viverra scelerisque lacinia,
+            urna elit rhoncus turpis, non blandit turpis ex quis felis.
+          </p>
+        </div>
+        <div class="column is-6">
+          <figure class="image image is-2by1">
+            <img src="/images/TKR12010133.png">
+          </figure>
+          <h3 class="is-size-3 orange">Driver Engineer App</h3>
+          <p>
+            Morbi venenatis, mauris viverra scelerisque lacinia,
+            urna elit rhoncus turpis, non blandit turpis ex quis felis.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="columns margin top six">
+        <div class="column">
+          <h2 id="tech" class="is-size-2">Technical Documents</h2>
+          <p>
+            Aenean hendrerit nunc non lectus hendrerit finibus.
+            Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns top margin two is-multiline">
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+
+      </div>
+
+      <div class="columns margin top six">
+        <div class="column">
+          <h2 id="literature" class="is-size-2">Literature</h2>
+          <p>
+            Aenean hendrerit nunc non lectus hendrerit finibus.
+            Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns top margin two is-multiline">
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+
+      </div>
+
+
+      <div class="columns margin top six">
+        <div class="column">
+          <h2 id="whitepapers" class="is-size-2">Whitepapers & Case Studies</h2>
+          <p>
+            Aenean hendrerit nunc non lectus hendrerit finibus.
+            Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
+          </p>
+        </div>
+      </div>
+
+      <div class="columns top margin two is-multiline">
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-1.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+        <div class="column is-2-3 zoom">
+  <figure class="image is-4by5">
+    <img src="images/homepage-case-2.png">
+  </figure>
+  <p class="top padding least orange">
+    Technical Document Title
+  </p>
+</div>
+
+
+      </div>
+
+
+
+
+      <br /><br /><br /><br />
+    </div>
+  </section>
+
+  <footer class="footer">
+<div class="container">
+  <div class="columns center">
+    <div class="column is-12 is-paddingless">
+
+
+        <nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+          <div class="navbar-left top padding footer-pad" align="center">
+            <span class="fa-stack fa-1-5x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-1-5x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-1-5x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </span>
+            <span class="fa-stack fa-1-5x">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </span>
+
+          </div>
+
+          <div class="navbar-right">
+            <div class="navbar-end" align="center">
+              <a class="navbar-item" href="/about.html">Legal Notices</a>
+              <a class="navbar-item" href="/about.html">Terms of Use</a>
+              <a class="navbar-item" href="/about.html">Privacy Statement</a>
+              <a class="navbar-item" href="/about.html">Sitemap</a>
+              <a class="navbar-item" href="/about.html">Timken.com</a>
+              <a class="navbar-item" href="/about.html">Contact Us</a>
+            </div>
+          </div>
+        </nav>
+      </footer>
+      <footer class="footer dark">
+        <div class="container">
+          <div class="columns">
+            <div class="column has-text-right">
+              &copy; 2018 Copywrite
+            </div>
+          </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>
+</footer>
+<script type="text/javascript" src="js/jquery.sticky.js"></script> <!-- TODO: this isn't being used - remove -->
+<script type="text/javascript" src="lib/main.js"></script>
+
+
+  </body>
+</html>

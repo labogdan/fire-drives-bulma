@@ -1,0 +1,16 @@
+<svg width="1600px" height="362px" viewBox="0 0 1600 362" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M0,260.223248 L0,395.429688 L1657,395.429688 C1657,131.809896 1657,0 1657,0 C1331.14583,238.215182 778.8125,324.956265 0,260.223248 Z" id="path-1"></path>
+    </defs>
+    <g id="Drives-Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-Home" transform="translate(0.000000, -585.000000)">
+            <g id="Curve" transform="translate(-6.000000, 551.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Path-2" fill="#FFFFFF" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
