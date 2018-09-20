@@ -12,7 +12,6 @@ class Sticky {
     }
 
     positionOnScroll() {
-
       if ($(window).width() <= 768) {
         return;
       }
@@ -124,20 +123,9 @@ class LoadMore {
       console.warn('error fetching data');
     });
   }
-
 }
 
-$(document).ready(function() {
-
-  var burger = new HamburgerMenu();
-
-  var sticky = new Sticky("section.header");
-  $(window).on("scroll", function () {
-    sticky.positionOnScroll();
-  });
-
-  var scroll = new SmoothScroll();
-
+function initSlickCarousels() {
   $('.is-slick-history-top').slick({
     centerMode: false,
     centerPadding: '60px',
@@ -149,9 +137,28 @@ $(document).ready(function() {
   });
 
   $('.is-slick-history-bottom').slick({
+    responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 4
+      }
+    },
+    {
+      breakpoint: 700,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 3
+      }
+    }],
     centerMode: true,
-    centerPadding: '100px',
-    slidesToShow: 6,
+    centerPadding: '60px',
+    slidesToShow: 5,
     infinite: true,
     asNavFor: '.is-slick-history-top',
     focusOnSelect: true,
@@ -182,6 +189,15 @@ $(document).ready(function() {
 
   $('.is-slick-carousel').slick({
     responsive: [
+      {
+        breakpoint: 1214,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3
+        }
+      },
     {
       breakpoint: 767,
       settings: {
@@ -207,7 +223,34 @@ $(document).ready(function() {
     prevArrow: "<span class='slick-arrow left'><i class='fas fa-chevron-left fa-2x'></span>",
     nextArrow: "<span class='slick-arrow right'><i class='fas fa-chevron-right fa-2x'></span>"
   });
+}
 
-  var loadMore = new LoadMore("#loadMore", "http://localhost:8888/stub/load-results.json")
+function initLanguageMenu() {
+  $(".lang-list__listener").click(function (e) {
+    e.stopPropagation();
+    $(".lang-list__listener").attr('data-state','active');
+  });
+  $(document).click(function () {
+    $(".lang-list__listener").attr('data-state','');
+  });
+}
+
+$(document).ready(function() {
+
+  var burger = new HamburgerMenu();
+
+  var sticky = new Sticky("section.header");
+  $(window).on("scroll", function () {
+    sticky.positionOnScroll();
+  });
+
+  var scroll = new SmoothScroll();
+
+  initSlickCarousels();
+
+  initLanguageMenu();
+
+  /* this is just stub functionality for demonstration of load more button - remove for production */
+  var loadMore = new LoadMore("#loadMore", "/stub/load-results.json");
 
 });

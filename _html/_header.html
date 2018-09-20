@@ -4,8 +4,10 @@
       <div class="column is-12">
         <nav class="navbar is-transparent sticky" role="navigation" aria-label="main navigation">
           <div class="navbar-brand">
-            <a href="http://localhost:8888" onclick="window.location.href=http://localhost:8888">
-              <object data="svg/drives-logo.svg" type="image/svg+xml"></object>
+            <a href="">
+              <svg class="brand logo" role="img" title="logo">
+                <use xlink:href="svg/svg-sprites.svg#logo"></use>
+              </svg>
             </a>
           </div>
 
@@ -13,21 +15,82 @@
       <!-- TODO: css-ize this -->
     </div>
 
-    <div class="navbar-menu double is-visible-tablet">
+    <div class="navbar-menu double is-visible-tablet has-text-centered">
 
       <div class="navbar-end hide">
         <a class="navbar-item" href="/download.html">Download Catalog</a>
         <a class="navbar-item" href="/pt-place.html">PT Place</a>
-        <a class="navbar-item" id="language-change"><object data="svg/language-icon.svg" type="image/svg+xml"></object></a>
+
+        <a class="navbar-item lang-list__listener">
+          <svg class="language icon" role="img">
+            <use xlink:href="svg/svg-sprites.svg#language-icon"></use>
+          </svg>
+        </a>
+        <!--
+        <li class="lang-list">
+        		<a class="lang-list__listener" href="#"><span class="hide-text">Languages</span>
+        		    <svg class="icon lang" role="img" title="lang">
+        						<use xlink:href="https://www.drives.com/wp-content/themes/drives/images/sprite.svg#theme--icon-lang"></use>
+        				</svg>
+        		</a>
+        	-->
+        		<div class="lang-list__list">
+              <div class="lang_sel_list_vertical wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-list-vertical" id="lang_sel_list">
+        	       <ul>
+        					<li class="icl-en wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-item-legacy-list-vertical">
+        		        <a href="https://www.drives.com/" class="lang_sel_sel"><span class="wpml-ls-native icl_lang_sel_native">English</span></a>
+                  </li>
+        					<li class="icl-zh-hans wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-zh-hans wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/zh-hans/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">简体中文</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Chinese (Simplified)<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-fr wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-fr wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/fr/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Français</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>French<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-de wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-de wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/de/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Deutsch</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>German<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-it wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-it wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/it/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Italiano</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Italian<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-ja wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ja wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/ja/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">日本語</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Japanese<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-ko wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ko wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/ko/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">한국어</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Korean<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-pl wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-pl wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/pl/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Polski</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Polish<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-pt-br wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-pt-br wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/pt-br/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Português</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Portuguese (Brazil)<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-ro wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ro wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/ro/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Română</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Romanian<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-ru wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-ru wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/ru/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Русский</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Russian<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-es wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-es wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/es/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">Español</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>Spanish<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        					<li class="icl-en-in wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en-in wpml-ls-last-item wpml-ls-item-legacy-list-vertical">
+        				<a href="https://www.drives.com/en-in/" class="lang_sel_other"><span class="wpml-ls-native icl_lang_sel_native">English (India)</span><span class="wpml-ls-display icl_lang_sel_translated"><span class="wpml-ls-bracket icl_lang_sel_bracket"> (</span>English (India)<span class="wpml-ls-bracket icl_lang_sel_bracket">)</span></span></a>
+        			</li>
+        		</ul>
+        		</div>
+        	</div>
+
+
+
       </div>
 
       <div class="navbar-end show">
-        <a class="navbar-item" href="/about.html">About Us</a>
-        <a class="navbar-item" href="/products.html">Products</a>
-        <a class="navbar-item" href="/locations.html">Locations</a>
-        <a class="navbar-item" href="/markets.html">Markets</a>
-        <a class="navbar-item" href="/resources.html">Resources</a>
-        <a class="navbar-item" href="/contact.html">Contact</a>
+        <a class="navbar-item" href="/drives-firefli-2/about.html">About Us</a>
+        <a class="navbar-item" href="/drives-firefli-2/products.html">Products</a>
+        <a class="navbar-item" href="/drives-firefli-2/locations.html">Locations</a>
+        <a class="navbar-item" href="/drives-firefli-2/markets.html">Markets</a>
+        <a class="navbar-item" href="/drives-firefli-2/resources.html">Resources</a>
+        <a class="navbar-item" href="/drives-firefli-2/contact.html">Contact</a>
       </div>
     </div>
 
