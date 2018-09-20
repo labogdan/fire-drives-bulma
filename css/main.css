@@ -6897,7 +6897,7 @@ svg.engineering.crane {
   height: 79px; }
 
 .svg.bg-swoosh {
-  background: url("/drives-firefli-2/svg/header-swoosh.svg");
+  background: url("/svg/header-swoosh.svg");
   background-size: cover;
   width: 100%;
   height: 163px;
@@ -7033,7 +7033,7 @@ section.toughest.applications {
   font-size: 1.5rem; }
 
 .map {
-  background: url("/drives-firefli-2/images/map-mock.png");
+  background: url("/images/map-mock.png");
   background-size: cover;
   width: 100%;
   min-height: 500px; }
@@ -7052,27 +7052,27 @@ section.toughest.applications {
       background: linear-gradient(to top, #424247 50%, white 98%); } }
 
 .world-bg {
-  background: url("/drives-firefli-2/images/iStock-910410684.png");
+  background: url("/images/iStock-910410684.png");
   background-size: cover;
   min-height: 500px; }
 
 .resources-bg {
-  background: linear-gradient(to top, transparent 60%, white 98%), url("/drives-firefli-2/images/resources-bg.png");
+  background: linear-gradient(to top, transparent 60%, white 98%), url("/images/resources-bg.png");
   background-size: cover;
   min-height: 500px; }
 
 .markets-bg {
-  background: linear-gradient(to top, transparent 60%, white 98%), url("/drives-firefli-2/images/TKR13090298.png");
+  background: linear-gradient(to top, transparent 60%, white 98%), url("/images/TKR13090298.png");
   background-size: cover;
   min-height: 500px; }
 
 .about-bg {
-  background: linear-gradient(to top, transparent 60%, white 98%), url("/drives-firefli-2/images/TKR16050054.png");
+  background: linear-gradient(to top, transparent 60%, white 98%), url("/images/TKR16050054.png");
   background-size: cover;
   min-height: 500px; }
 
 .about-bg-2 {
-  background: linear-gradient(to top, transparent 60%, white 98%), url("/drives-firefli-2/images/TimkenCafeteriaBg.png");
+  background: linear-gradient(to top, transparent 60%, white 98%), url("/images/TimkenCafeteriaBg.png");
   background-size: cover;
   min-height: 500px; }
 

@@ -591,7 +591,7 @@ svg {
 
 .svg {
   &.bg-swoosh {
-    background: url("/drives-firefli-2/svg/header-swoosh.svg");
+    background: url("/svg/header-swoosh.svg");
     background-size: cover;
     width:100%;
     height: 163px;
@@ -798,7 +798,7 @@ section.toughest.applications {
 }
 
 .map {
-  background: url("/drives-firefli-2/images/map-mock.png");
+  background: url("/images/map-mock.png");
   background-size: cover;
   width:100%;
   min-height:500px;
@@ -828,26 +828,26 @@ section.toughest.applications {
   min-height:500px;
 }
 
-.world-bg {
-  background: url("/drives-firefli-2/images/iStock-910410684.png");
+.world-bg { 
+  background: url("/images/iStock-910410684.png");
   background-size: cover;
   min-height:500px;
 }
 
 .resources-bg {
-  @include backgroundImageGradient("/drives-firefli-2/images/resources-bg.png")
+  @include backgroundImageGradient("/images/resources-bg.png")
 }
 
 .markets-bg {
-  @include backgroundImageGradient("/drives-firefli-2/images/TKR13090298.png")
+  @include backgroundImageGradient("/images/TKR13090298.png")
 }
 
 .about-bg {
-  @include backgroundImageGradient("/drives-firefli-2/images/TKR16050054.png")
+  @include backgroundImageGradient("/images/TKR16050054.png")
 }
 
 .about-bg-2 {
-  @include backgroundImageGradient("/drives-firefli-2/images/TimkenCafeteriaBg.png")
+  @include backgroundImageGradient("/images/TimkenCafeteriaBg.png")
 }
 
 
