@@ -828,7 +828,7 @@ section.toughest.applications {
   min-height:500px;
 }
 
-.world-bg { 
+.world-bg {
   background: url("/images/iStock-910410684.png");
   background-size: cover;
   min-height:500px;
@@ -1103,6 +1103,13 @@ footer {
 
   }
 
+}
+
+@media screen and (min-width: 1408px) {
+  .container {
+      max-width: 1280px;
+      width: 1280px;
+  }
 }
 
 .card-content {

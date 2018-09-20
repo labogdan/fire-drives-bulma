@@ -4543,7 +4543,7 @@ a.navbar-link.is-active {
   height: 1px;
   margin: 0.5rem 0; }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .navbar > .container {
     display: block; }
   .navbar-brand .navbar-item,
@@ -4576,7 +4576,7 @@ a.navbar-link.is-active {
   html.has-navbar-fixed-bottom-touch {
     padding-bottom: 3.25rem; } }
 
-@media screen and (min-width: 769px), print {
+@media screen and (min-width: 1024px) {
   .navbar,
   .navbar-menu,
   .navbar-start,
@@ -7257,6 +7257,11 @@ footer {
     margin-top: 8rem; }
   .card.top-margin-small {
     margin-top: 0; } }
+
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1280px;
+    width: 1280px; } }
 
 .card-content.orange-text {
   color: #E17400;
