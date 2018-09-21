@@ -203,7 +203,7 @@ table th {
   top: 0; }
 
 .is-size-1 {
-  font-size: 3.6rem !important; }
+  font-size: 3.3rem !important; }
 
 .is-size-2 {
   font-size: 2.5rem !important; }
@@ -225,7 +225,7 @@ table th {
 
 @media screen and (max-width: 768px) {
   .is-size-1-mobile {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-mobile {
     font-size: 2.5rem !important; }
   .is-size-3-mobile {
@@ -241,7 +241,7 @@ table th {
 
 @media screen and (min-width: 769px), print {
   .is-size-1-tablet {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-tablet {
     font-size: 2.5rem !important; }
   .is-size-3-tablet {
@@ -257,7 +257,7 @@ table th {
 
 @media screen and (max-width: 1023px) {
   .is-size-1-touch {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-touch {
     font-size: 2.5rem !important; }
   .is-size-3-touch {
@@ -273,7 +273,7 @@ table th {
 
 @media screen and (min-width: 1024px) {
   .is-size-1-desktop {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-desktop {
     font-size: 2.5rem !important; }
   .is-size-3-desktop {
@@ -289,7 +289,7 @@ table th {
 
 @media screen and (min-width: 1216px) {
   .is-size-1-widescreen {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-widescreen {
     font-size: 2.5rem !important; }
   .is-size-3-widescreen {
@@ -305,7 +305,7 @@ table th {
 
 @media screen and (min-width: 1408px) {
   .is-size-1-fullhd {
-    font-size: 3.6rem !important; }
+    font-size: 3.3rem !important; }
   .is-size-2-fullhd {
     font-size: 2.5rem !important; }
   .is-size-3-fullhd {
@@ -917,7 +917,7 @@ a.box:active {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #E17400;
+  background-color: #FF8300;
   border-color: #dbdbdb;
   color: white;
   cursor: pointer;
@@ -3264,7 +3264,7 @@ a.tag:hover {
   .title:not(.is-spaced) + .subtitle {
     margin-top: -1.5rem; }
   .title.is-1 {
-    font-size: 3.6rem; }
+    font-size: 3.3rem; }
   .title.is-2 {
     font-size: 2.5rem; }
   .title.is-3 {
@@ -3289,7 +3289,7 @@ a.tag:hover {
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.5rem; }
   .subtitle.is-1 {
-    font-size: 3.6rem; }
+    font-size: 3.3rem; }
   .subtitle.is-2 {
     font-size: 2.5rem; }
   .subtitle.is-3 {
@@ -4543,7 +4543,7 @@ a.navbar-link.is-active {
   height: 1px;
   margin: 0.5rem 0; }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .navbar > .container {
     display: block; }
   .navbar-brand .navbar-item,
@@ -4576,7 +4576,7 @@ a.navbar-link.is-active {
   html.has-navbar-fixed-bottom-touch {
     padding-bottom: 3.25rem; } }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 769px), print {
   .navbar,
   .navbar-menu,
   .navbar-start,
@@ -6575,12 +6575,23 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 .is-slick-history-bottom {
   margin-top: 8px; }
 
-a.button.timeline {
+a.button {
+  padding: 1em 2.5em 1em 2.5em;
   border: none;
-  background: #424247;
-  transition: color 0.25s; }
-  a.button.timeline:hover {
-    color: #E17400; }
+  border-radius: 0;
+  transition: background 0.25s;
+  font-weight: bold; }
+  a.button.is-small {
+    border-radius: 0; }
+  a.button:hover {
+    color: white;
+    background: #E17400; }
+  a.button.timeline {
+    font-weight: normal;
+    transition: color 0.25s;
+    background: #424247; }
+    a.button.timeline:hover {
+      color: #E17400; }
 
 .time-item {
   transition: color 0.25s;
@@ -6797,6 +6808,14 @@ li::before {
 .orange {
   color: #E17400; }
 
+.content h1, .content h2, .content h3, .content h4 {
+  font-weight: 700; }
+
+.input.hero {
+  border-radius: 28px;
+  height: 54px;
+  font-size: 1.2rem; }
+
 .lang-list {
   position: relative; }
 
@@ -6997,9 +7016,10 @@ nav.breadcrumb {
   background: transparent;
   color: white; }
   .body-bg-image .card.opaque-bg {
+    max-width: 525px;
     background: rgba(66, 66, 71, 0.45);
     margin-top: 8rem;
-    padding: 3rem; }
+    padding: 2.4rem; }
   .body-bg-image .card .breadcrumb a, .body-bg-image .card .breadcrumb li.is-active a {
     color: white; }
   .body-bg-image .card h1 {
@@ -7084,6 +7104,12 @@ nav .level-item a.link {
 
 .justify-left {
   justify-content: flex-start; }
+
+a.black {
+  color: #424247; }
+
+a.white {
+  color: white; }
 
 .card.clear-background {
   background: transparent;
@@ -7214,6 +7240,12 @@ footer {
 
 .fa-1-5x {
   font-size: 1.4em; }
+
+a.fa-footer {
+  color: #4a4a4a;
+  transition: color 0.25s; }
+  a.fa-footer:hover {
+    color: #E17400; }
 
 @media screen and (min-width: 1216px) {
   .navbar-menu .navbar-item {

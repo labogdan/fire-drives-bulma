@@ -15,6 +15,20 @@ _or_
 yarn add bulma-start
 ```
 
+<b>Drives Note:</b> After NPM install, it is necessary to edit framework code:
+
+node_modules/bulma.sass.components/navbar.sass
+
+On line 236:
+
++desktop .navbar, .navbar-menu, .navbar-start, .navbar-end
+
+change +desktop to +tablet
+
+On line 200, right before .navbar > .container display: block
+
+change +touch to +mobile
+
 ## What's included
 
 The `npm` dependencies included in `package.json` are:
