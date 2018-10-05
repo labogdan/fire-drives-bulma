@@ -94,15 +94,19 @@ class LoadMore {
     this.$element = $(selector);
     this.ajaxUrl = ajaxUrl;
     this.$element.on('click', function () {
-      self.loadAjax();
+      self.$element.addClass("is-loading");
+      self.$element.find(".icon").addClass("hidden");
+      window.setTimeout(function () {self.loadAjax()}, 2000); //TODO: remove the timeout
     })
   }
 
   processResults(data) {
     let results = "";
+    let count = 5;
     data.elements.forEach(function (el) {
       var result = '<div class="column is-10 text-block">'
-                 + '<h3 class="is-size-4 orange-text">'
+                 + '<div class="number-circle has-text-centered">' + count++ + ' </div>'
+                 + '<h3 class="is-size-4 orange-text bolder">'
                  + el.title
                  + '</h3><p>'
                  + el.content
@@ -118,6 +122,8 @@ class LoadMore {
     $.ajax({
       url: this.ajaxUrl
     }).done(function(data) {
+      self.$element.removeClass("is-loading");
+      self.$element.find(".icon").removeClass("hidden");
       self.processResults(data);
     }).fail(function (data) {
       console.warn('error fetching data');
@@ -193,7 +199,7 @@ function initSlickCarousels() {
         breakpoint: 1214,
         settings: {
           arrows: false,
-          centerMode: true,
+          centerMode: false,
           centerPadding: '40px',
           slidesToShow: 3
         }
@@ -202,7 +208,7 @@ function initSlickCarousels() {
       breakpoint: 767,
       settings: {
         arrows: false,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '40px',
         slidesToShow: 2
       }
@@ -211,12 +217,12 @@ function initSlickCarousels() {
       breakpoint: 620,
       settings: {
         arrows: false,
-        centerMode: true,
+        centerMode: false,
         centerPadding: '40px',
         slidesToShow: 1
       }
     }],
-    centerMode: true,
+    centerMode: false,
     centerPadding: '60px',
     slidesToShow: 4,
     arrows: true,
@@ -251,6 +257,6 @@ $(document).ready(function() {
   initLanguageMenu();
 
   /* this is just stub functionality for demonstration of load more button - remove for production */
-  var loadMore = new LoadMore("#loadMore", "/stub/load-results.json");
+  var loadMore = new LoadMore("#loadMore", "stub/load-results.json");
 
 });

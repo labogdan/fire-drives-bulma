@@ -14,7 +14,7 @@
             <div class="card top-margin-medium">
               <div class="card-content padding left none">
                 <div class="content has-text-left">
-                  <nav class="breadcrumb" aria-label="breadcrumbs">
+                  <nav class="breadcrumb margin top two" aria-label="breadcrumbs">
                     <ul>
                       <li class="is-active is-capitalized"><a href="#" aria-current="page">Contact</a></li>
                     </ul>
@@ -22,8 +22,7 @@
                   <h1 class="title is-2">Contact Us</h1>
                   <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis, mauris viverra scelerisque lacinia,
-                    urna elit rhoncus turpis, non blandit turpis ex quis felis. Aenean hendrerit nunc non lectus hendrerit finibus.
-                    Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
+                    urna elit rhoncus turpis, non blandit turpis ex quis felis.
                   </p>
                 </div>
               </div>
@@ -32,16 +31,7 @@
 
           <div class="column is-5">
             <div class="card top-margin-small">
-              <div class="card-content">
-                <div class="field">
-                  <p class="control has-icons-left has-icons-right">
-                    <input class="input" placeholder="Search Drives Products and Resources">
-                    <span class="icon is-small is-right">
-                      <i class="fas fa-search fa-flip-horizontal"></i>
-                    </span>
-                  </p>
-                </div>
-              </div>
+              ${require('./_search_field.html')}
             </div>
         </div>
       </div>
@@ -52,9 +42,50 @@
   </section>
   <section class="about-bg top-margin-four-mobile padding bottom six">
     <div class="container has-text-black">
-      <div class="columns top-margin">
-        <div class="column">
+      <div class="columns">
+        <div class="column is-9">
           To be styled when we plug in to wordpress and generate the form using a plugin.
+        </div>
+        <div class="column is-3 margin left four">
+          <div class="aside-company-title">
+            Drives Company Title
+          </div>
+          <div class="aside-address margin top one">
+            <p>
+              4500 Mount Pleasant NW
+            </p>
+            <p>
+              North Canton, OH 44720
+            </p>
+            <p>
+              (555) 123-4567
+            </p>
+            <p>
+              <a href="mailto: email@drives.com">email@drives.com</a>
+            </p>
+          </div>
+          <div class="aside-share margin top two">
+            <div>
+              Follow Us
+            </div>
+            <a class="fa-stack orange">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </a>
+            <a class="fa-stack orange">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+            </a>
+            <a class="fa-stack orange">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-linkedin-in fa-stack-1x fa-inverse"></i>
+            </a>
+            <a class="fa-stack orange">
+              <i class="fas fa-circle fa-stack-2x"></i>
+              <i class="fab fa-youtube fa-stack-1x fa-inverse"></i>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

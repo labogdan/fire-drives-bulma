@@ -3,7 +3,7 @@
 
   ${require('./_head.html')}
 
-  <body class="products">
+  <body class="about">
 
     ${require('./_header.html')}
 
@@ -29,12 +29,12 @@
             <div class="card top-margin-small">
               <div class="card-content">
                 <div class="field">
-                  <p class="control has-icons-left has-icons-right">
-                    <input class="input" placeholder="Search Drives Products and Resources">
-                    <span class="icon is-small is-right">
+                  <form class="control has-icons-right">
+                    <input class="input larger" placeholder="Search Drives Products and Resources">
+                    <button class="search icon is-medium is-right fa-1-5x">
                       <i class="fas fa-search fa-flip-horizontal"></i>
-                    </span>
-                  </p>
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -90,7 +90,7 @@
       </div>
 
       <div class="columns is-centered margin top four">
-          <div class="column is-6 is-10-tablet has-text-centered">
+          <div class="column is-7-desktop is-10-mobile is-8-tablet has-text-centered">
             <h3 class="is-size-2">Engineering & Quality</h3>
             <p class="top margin two">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi venenatis, mauris viverra scelerisque lacinia,
@@ -111,7 +111,7 @@
     <div class="container">
       <div class="columns has-text-centered">
         <div class="column">
-          <h3 class="is-size-3">Our History Headline</h3>
+          <h3 class="is-size-3 timeline-header">Our History Headline</h3>
         </div>
       </div>
 
@@ -168,9 +168,9 @@
 
   <section class="has-text-black top margin four about-bg-2">
     <div class="container">
-      <div class="columns">
-        <div class="column has-text-centered">
-          <h3 class="is-size-3">Industry Affiliations Headline</h3>
+      <div class="columns is-centered">
+        <div class="column is-10 has-text-centered">
+          <h3 class="is-size-2">Industry Affiliations Headline</h3>
         </div>
       </div>
       <div class="columns is-centered top margin two">
@@ -181,11 +181,10 @@
             urna elit rhoncus turpis, non blandit turpis ex quis felis.
           </p>
           <p class="top margin two">
-            <a class="is-uppercase orange-text">View Link</a>
+            <a class="is-uppercase orange-text bolder">View Link</a>
           </p>
         </div>
-        <div class="column is-2">
-
+        <div class="column is-1">
         </div>
         <div class="column is-5">
           <img src="svg/timken-logo.svg" />
@@ -194,39 +193,47 @@
             urna elit rhoncus turpis, non blandit turpis ex quis felis.
           </p>
           <p class="top margin two">
-            <a class="is-uppercase orange-text">View Link</a>
+            <a class="is-uppercase orange-text bolder">View Link</a>
           </p>
         </div>
       </div>
 
-      <div class="columns border-bottom top margin six">
-        <div class="column">
-          <h3 class="is-size-3">News Headline</h3>
+      <div class="columns is-centered top margin six">
+        <div class="column is-9">
+          <h3 class="is-size-3">News Headline1</h3>
         </div>
-        <div class="column has-text-right">
-          <a class="is-uppercase orange-text">View More News</a>
+        <div class="column is-2 has-text-right">
+          <a class="is-uppercase orange-text bolder">View More News</a>
         </div>
       </div>
 
-      <div class="columns top margin two">
-        <div class="column is-6 padding right two">
-          ${require('./_news_module.html')}
+      <div class="columns is-centered">
+        <div class="column is-11 border-bottom up50"></div>
+      </div>
+
+      <div class="columns is-centered top margin two">
+        <div class="column is-5">
+          ${require('./_news_module_black.html')}
         </div>
-        <div class="column is-6 padding left two">
-          ${require('./_news_module.html')}
+        <div class="column is-1">
+        </div>
+        <div class="column is-5">
+          ${require('./_news_module_black.html')}
         </div>
       </div>
-      <div class="columns top margin two">
-        <div class="column is-6 padding right two">
-          ${require('./_news_module.html')}
+      <div class="columns is-centered top margin two">
+        <div class="column is-5">
+          ${require('./_news_module_black.html')}
         </div>
-        <div class="column is-6 padding left two">
-          ${require('./_news_module.html')}
+        <div class="column is-1">
+        </div>
+        <div class="column is-5">
+          ${require('./_news_module_black.html')}
         </div>
       </div>
 
       <div class="columns top margin six is-centered">
-        <div class="column is-8 is-10-tablet">
+        <div class="column is-7-desktop is-10-mobile is-8-tablet">
           <div class="card darker">
 
             <div class="card-content more-padding">
@@ -255,9 +262,6 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </section>
 

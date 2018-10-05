@@ -30,12 +30,12 @@
             <div class="card top-margin-small">
               <div class="card-content">
                 <div class="field">
-                  <p class="control has-icons-left has-icons-right">
-                    <input class="input" placeholder="Search Drives Products and Resources">
-                    <span class="icon is-small is-right">
+                  <form class="control has-icons-right">
+                    <input class="input larger" placeholder="Search Drives Products and Resources">
+                    <button class="search icon is-medium is-right fa-1-5x">
                       <i class="fas fa-search fa-flip-horizontal"></i>
-                    </span>
-                  </p>
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -46,10 +46,10 @@
   <section class="svg is-flex-desktop-only up250">
     <img src="svg/bottom-swoosh.svg" />
   </section>
-  <section class="default-background-image top-margin-four-mobile">
+  <section class="category-bg top-margin-four-mobile margin top negative less">
     <div class="container has-text-black">
       <div class="columns top-margin">
-        <div class="column is-4">
+        <div class="column is-4 margin right three no-mobile">
           <figure class="image is-4by3 zoom">
             <img src="images/TKR_Mechanical_DriveChain_Engineered_340x257.png" />
           </figure>
@@ -131,9 +131,9 @@
       </div>
 
       <div class="columns top margin four">
-        <div class="column">
+        <div class="column is-9">
           <h2 class="is-size-2">Product Literature and Docs</h2>
-          <p>
+          <p class="margin top one">
             Aenean hendrerit nunc non lectus hendrerit finibus.
             Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor. Aliquam eget libero eros.
           </p>
@@ -141,30 +141,30 @@
       </div>
 
       <div class="columns top margin two">
-        <div class="column is-3">
-          <figure class="image is-4by5">
+        <a class="column is-3">
+          <figure class="image is-4by5 zoom has-border">
             <img src="images/homepage-case-1.png">
           </figure>
           <p class="top padding least orange">
             Aenean hendrerit nunc non lectus hendrerit finibus.
           </p>
-        </div>
-        <div class="column is-3">
-          <figure class="image is-4by5">
+        </a>
+        <a class="column is-3">
+          <figure class="image is-4by5 zoom has-border">
             <img src="images/homepage-case-2.png">
           </figure>
           <p class="top padding least orange">
             Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor.
           </p>
-        </div>
-        <div class="column is-3">
-          <figure class="image is-4by5">
+        </a>
+        <a class="column is-3">
+          <figure class="image is-4by5 zoom has-border">
             <img src="images/homepage-case-2.png">
           </figure>
           <p class="top padding least orange">
             Ut lectus mi, consectetur quis pellentesque id, ornare nec tortor.
           </p>
-        </div>
+        </a>
       </div>
 
       <div class="columns top margin four">
@@ -173,7 +173,7 @@
         </div>
       </div>
 
-      <div class="columns top margin two is-slick-carousel">
+      <div class="columns top margin one is-slick-carousel">
 
         ${require('./_category_card.html')}
         ${require('./_category_card.html')}
@@ -184,49 +184,49 @@
 
       </div>
 
-      <div class="columns top margin four">
-        <div class="column">
+      <div class="columns top margin four is-centered">
+        <div class="column is-6 has-text-centered">
           <h2 class="is-size-2">Popular Applications</h2>
         </div>
       </div>
 
       <div class="columns top margin two is-centered">
-        <div class="column is-2">
+        <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
             <div class="card-image equal-height">
               <img src="svg/rig.svg" />
             </div>
-            <div class="card-content has-text-centered">
+            <div class="card-content has-text-centered black-text">
               Sugar Mill
             </div>
           </div>
         </div>
-        <div class="column is-2">
+        <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
             <div class="card-image equal-height">
               <img src="svg/rig.svg" />
             </div>
-            <div class="card-content has-text-centered">
+            <div class="card-content has-text-centered black-text">
               General Industry
             </div>
           </div>
         </div>
-        <div class="column is-2">
+        <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
             <div class="card-image equal-height">
               <img src="svg/rig.svg" />
             </div>
-            <div class="card-content has-text-centered">
+            <div class="card-content has-text-centered black-text">
               Automotive
             </div>
           </div>
         </div>
-        <div class="column is-2">
+        <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
             <div class="card-image equal-height">
               <img src="svg/rig.svg" />
             </div>
-            <div class="card-content has-text-centered">
+            <div class="card-content has-text-centered black-text">
               Metal Processing
             </div>
           </div>
@@ -253,7 +253,6 @@
       </div>
 
 
-      <br /><br /><br /><br />
     </div>
   </section>
 

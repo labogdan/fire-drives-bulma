@@ -15,24 +15,18 @@
           <h1 class="is-size-1 top margin four">
             Search Results
           </h1>
+          <p class="is-size-4">
+            Showing <b>5 results</b> for <b>Agricultural Chains</b>
+          </p>
         </div>
         <div class="column is-5">
           <div class="card transparent">
-            <div class="card-content">
-              <div class="field">
-                <p class="control has-icons-left has-icons-right">
-                  <input class="input" placeholder="Search Drives Products and Resources">
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-search fa-flip-horizontal"></i>
-                  </span>
-                </p>
-              </div>
-            </div>
+            ${require('./_search_field.html')}
           </div>
         </div>
       </div>
 
-      <div class="columns is-multiline is-centered">
+      <div class="columns is-multiline is-centered margin top four">
 
         ${require('./_search_result.html')}
 
@@ -47,12 +41,22 @@
         ${require('./_search_result.html')}
 
         ${require('./_search_result.html')}
+
+
+        <div class="column is-3">
+          <a class="button margin top two"  id="loadMore">
+            <span class="is-uppercase">Load More</span>
+            <span class="icon is-small">
+              <img src="svg/download.svg"
+            </span>
+          </a>
+        </div>
 
       </div>
 
 
 
-      <br /><br /><br /><br />
+
     </div>
   </section>
 
