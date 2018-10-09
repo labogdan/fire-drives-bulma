@@ -10,16 +10,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-  <!--<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>-->
-
-<link rel="stylesheet" type="text/css" href="css/flickity.css"/>
-
   <link rel="stylesheet" href="css/main.css">
-
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+  
 </head>
 
 
@@ -41,6 +34,13 @@
     <div style="display:flex; flex-grow:1; flex-shrink:1;">
       <!-- TODO: css-ize this -->
     </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
 
     <div class="navbar-menu double is-visible-tablet has-text-centered">
 
@@ -121,11 +121,6 @@
       </div>
     </div>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
   </nav>
       </div>
     </div>
@@ -142,7 +137,7 @@
 
       <div class="columns">
         <div class="column is-7">
-          <h1 class="is-size-1 top margin four">
+          <h1 class="title is-2 black-text top margin four">
             Request Literature Headline
           </h1>
         </div>
@@ -221,11 +216,11 @@
         <div class="column">
           <div class="card darker">
 
-            <div class="card-content more-padding">
+            <div class="card-content more-padding less-mobile-padding">
               <div class="content has-text-left">
 
 
-                <div class="columns is-centered is-multiline">
+                <div class="columns is-centered">
                   <div class="column is-8 has-text-centered">
                     <span class="is-size-2">Call-To-Action</span>
                     <p class="top margin two">
@@ -233,8 +228,9 @@
                       urna elit rhoncus turpis, non blandit turpis ex quis felis.
                     </p>
                   </div>
+                </div>
+                <div class="columns is-centered">
                     <div class="column has-text-centered">
-
                       <div class="columns is-centered">
                           <div class="column is-10">
                             <div class="field is-horizontal">
@@ -343,7 +339,9 @@
   </div>
 </div>
 </footer>
-<script type="text/javascript" src="js/jquery.sticky.js"></script> <!-- TODO: this isn't being used - remove -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="lib/main.js"></script>
 
 

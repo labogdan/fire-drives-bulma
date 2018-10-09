@@ -39,6 +39,7 @@ class HamburgerMenu {
       elem.toggleClass("is-active");
       menu.toggleClass("is-active");
       logo.toggleClass("hidden");
+      menu.toggleClass("nav-opened");
     });
 
   }
@@ -96,7 +97,8 @@ class LoadMore {
     this.$element.on('click', function () {
       self.$element.addClass("is-loading");
       self.$element.find(".icon").addClass("hidden");
-      window.setTimeout(function () {self.loadAjax()}, 2000); //TODO: remove the timeout
+      self.loadAjax();
+      //window.setTimeout(function () {self.loadAjax()}, 2000);
     })
   }
 
@@ -217,10 +219,11 @@ function initSlickCarousels() {
       breakpoint: 620,
       settings: {
         arrows: false,
-        centerMode: false,
+        centerMode: true,
         centerPadding: '40px',
         slidesToShow: 1
       }
+      /*"unslick"*/
     }],
     centerMode: false,
     centerPadding: '60px',

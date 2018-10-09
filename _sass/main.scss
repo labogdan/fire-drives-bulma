@@ -167,6 +167,9 @@ a.change-opacity:hover {
 
 h1.title.is-2 {
    font-size: 3.5rem;
+   @include mobile {
+     font-size: 2.5rem;
+   }
 }
 
 nav.breadcrumb ul li:first-of-type {
@@ -240,6 +243,11 @@ nav.breadcrumb ul li:first-of-type {
 }
 
 a.button {
+  &.wrap-mobile {
+    @include mobile {
+      white-space:normal;
+    }
+  }
   &.is-small {
     border-radius: 0;
   }
@@ -414,6 +422,9 @@ li::before {
 
 .top {
   &.margin {
+    &.mobile-only {
+      margin-top: 1rem;
+    }
     &.half {
       margin-top: 0.5rem;
     }
@@ -425,6 +436,11 @@ li::before {
     }
     &.four {
       margin-top: 4rem;
+      &.mobile-smaller {
+        @include mobile {
+          margin-top: 2rem;
+        }
+      }
     }
     &.six {
       margin-top: 6rem;
@@ -434,13 +450,29 @@ li::before {
     }
     &.ten {
       margin-top: 10rem;
+      &.mobile {
+        @include mobile {
+          margin-top: 6rem;
+        }
+      }
     }
     &.twelve {
       margin-top: 12rem;
     }
     &.negative {
+      &.mobile {
+        @include mobile {
+          margin-top: -2rem;
+        }
+      }
       &.less {
         margin-top: -2rem;
+      }
+      &.medium {
+        margin-top: -5rem;
+      }
+      &.medium-large {
+        margin-top: -8rem;
       }
       &.more {
         margin-top: -10rem;
@@ -453,6 +485,12 @@ li::before {
     }
     &.least {
       padding-top: 1.5rem;
+      &.no-mobile {
+        @include mobile {
+          padding-top: 0;
+        }
+      }
+
     }
     &.two {
       padding-top: 2rem;
@@ -613,10 +651,16 @@ li::before {
   margin-top: 15px;
 }
 
+
+
 .container {
   .columns {
     margin-left: $column-margin;
     margin-right: $column-margin;
+    &.no-mobile-margins {
+      margin-left: 0;
+      margin-right: 0;
+    }
   }
 }
 
@@ -750,8 +794,31 @@ section.header {
   margin-top: -100px;
 }
 
+.up120 {
+  margin-top: -120px;
+}
+
+.up160 {
+  margin-top: -160px;
+}
+
 .up250 {
   margin-top: -16rem;
+}
+
+svg symbol path.rig1 {
+    fill: inherit;
+}
+use.icon-general {
+  fill: $orange;
+}
+
+svg.current-selection {
+  color: $orange;
+}
+
+.rig {
+  color: $black;
 }
 
 svg {
@@ -800,7 +867,7 @@ svg {
     background-position: center top;
     z-index: 30;
     position: relative;
-    top: -132px;
+    top: -142px;
   }
   &.bg-swoosh {
     background: url("../svg/header-swoosh.svg");
@@ -895,6 +962,11 @@ section {
   }
 }
 
+.nav-opened {
+  max-height: 99vh;
+  min-height: 100vh;
+  box-shadow: none;
+}
 
 @media screen and (min-width: 768px) {
   .navbar-menu.double {
@@ -954,6 +1026,10 @@ nav.breadcrumb {
       background: rgba(66, 66, 71, 0.45);
       margin-top: 8rem;
       padding: 2.4rem;
+      z-index: 20;
+      @include mobile  {
+        padding: 0;
+      }
     }
     box-shadow: none;
     background: transparent;
@@ -970,22 +1046,6 @@ nav.breadcrumb {
 
 // hero and page-specific
 
-.home-page-background-image {
-  background: linear-gradient(to top, $default-background 15%, transparent 75%, $white 98%),
-              url("https://picsum.photos/1600/?random");
-  background-size: cover;
-  min-height:500px;
-}
-
-.default-background-image {
-  background: linear-gradient(to top, transparent, $white 98%),
-              url("https://picsum.photos/1600/?random");
-  background-size: cover;
-  min-height:500px;
-  @include mobile {
-    background: linear-gradient(to top, $default-background 50%, $white 98%);
-  }
-}
 
 @mixin backgroundImageGradient($url, $vw : 56.25vw, $where: bottom, $second: 30%) {
   @if $where == bottom {
@@ -1013,6 +1073,23 @@ nav.breadcrumb {
   min-height:500px;
 }
 
+.home-page-background-image {
+  background: linear-gradient(to top, #424247 18%, transparent 53%, white 70%), url("https://picsum.photos/1600/?random");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height:500px;
+}
+
+.default-background-image {
+  @include backgroundImageGradient("https://picsum.photos/1600/?random")
+  @include mobile {
+    background: linear-gradient(to top, $default-background 50%, $white 98%);
+  }
+}
+
+
+
 .world-bg {
   background: url("../images/iStock-910410684.png");
   background-size: cover;
@@ -1024,12 +1101,17 @@ nav.breadcrumb {
 }
 
 .markets-bg {
-  @include backgroundImageGradient("../images/TKR13090298.png")
+  @include backgroundImageGradient("../images/TKR13090298.png", 44vw)
 }
 
 .about-bg {
   @include backgroundImageGradient("../images/TKR16050054.png", 32.25vw)
 }
+
+.contact-bg {
+  @include backgroundImageGradient("../images/TKR16050054.png", 12.25vw)
+}
+
 
 .about-bg-2 {
   @include backgroundImageGradient("../images/TimkenCafeteriaBg.png")
@@ -1048,11 +1130,23 @@ nav.breadcrumb {
   }
 }
 
+.contact {
+  .body-bg-image {
+    background: url("https://picsum.photos/1600/?image=1044");
+    background-size: cover;
+    min-height:600px;
+  }
+  section:last-of-type {
+    padding-bottom: 12rem;
+  }
+}
+
+
 .products {
   .body-bg-image {
     background: url("https://picsum.photos/1600/?image=1044");
     background-size: cover;
-    min-height:500px;
+    min-height:600px;
   }
   section:last-of-type {
     padding-bottom: 12rem;
@@ -1074,7 +1168,7 @@ nav.breadcrumb {
   .body-bg-image {
     background: url("https://picsum.photos/1600/?image=1044");
     background-size: cover;
-    min-height:500px;
+    min-height:600px;
   }
   section:last-of-type {
     padding-bottom: 8rem;
@@ -1089,6 +1183,16 @@ nav.breadcrumb {
   position: absolute;
   top: 3px;
   left: -10px;
+  @include mobile {
+    left: -28px;
+  }
+}
+
+.half-mobile {
+  @include mobile {
+    flex: none !important;
+    width: 50% !important;
+  }
 }
 
 .phone-number {
@@ -1141,6 +1245,9 @@ a {
     &.black {
       color: $default-background;
     }
+    &.darkest {
+      color: $black;
+    }
     &.white {
       color: $white;
     }
@@ -1180,6 +1287,9 @@ a {
     .card-content {
       &.more-padding {
       padding: 4rem;
+        &.less-mobile-padding {
+          padding: 1rem;
+        }
       }
       padding: 4rem;
       @include mobile {
@@ -1367,8 +1477,23 @@ a.fa-footer {
   }
 
   .top-margin-four-mobile {
-    margin-top: 4rem;
+    margin-top: 4rem !important;
   }
+  .top-margin-six-mobile {
+    margin-top: 6rem !important;
+  }
+  .top-margin-six-mobile {
+    margin-top: 8rem !important;
+  }
+  .top-margin-ten-mobile {
+    margin-top: 10rem !important;
+  }
+
+.is-overflow-y {
+  overflow-y: scroll;
+}
+
+
   .home-page-background-image {
     background: $default-background !important;
     min-height:500px;
@@ -1420,6 +1545,15 @@ a.fa-footer {
     color: $black;
   }
 }
+
+.black-text {
+  color: $black;
+}
+
+.is-size-1 {
+  line-height: 1.2
+}
+
 
 .swoosh::before {
   content: '';

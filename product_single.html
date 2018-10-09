@@ -10,16 +10,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-  <!--<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>-->
-
-<link rel="stylesheet" type="text/css" href="css/flickity.css"/>
-
   <link rel="stylesheet" href="css/main.css">
-
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+  
 </head>
 
 
@@ -41,6 +34,13 @@
     <div style="display:flex; flex-grow:1; flex-shrink:1;">
       <!-- TODO: css-ize this -->
     </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
 
     <div class="navbar-menu double is-visible-tablet has-text-centered">
 
@@ -121,11 +121,6 @@
       </div>
     </div>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
   </nav>
       </div>
     </div>
@@ -173,10 +168,12 @@
       </div>
     </section>
 
-  <section class="svg is-flex-desktop-only up250">
-    <img src="svg/bottom-swoosh.svg" />
-  </section>
-  <section class="category-bg top-margin-four-mobile margin top negative less">
+
+    <section class="svg is-flex-desktop-only up250 bottom-swoosh">
+</section>
+
+
+  <section class="category-bg top-margin-four-mobile margin top negative more">
     <div class="container has-text-black">
       <div class="columns top-margin">
         <div class="column is-4 margin right three no-mobile">
@@ -219,44 +216,48 @@
         <div class="column">
           <h2 class="is-size-2">Chain Comparison Tool Headline</h2>
 
-          <table class="table is-fullwidth is-hoverable is-striped top margin two">
-            <thead>
+          <div class="is-overflow-y">
+
+            <table class="table is-fullwidth is-hoverable is-striped top margin two">
+              <thead>
+                <tr>
+                <th>Item</th>
+                <th>Title</th>
+                <th>Title</th>
+                <th>Title</th>
+                <th>Title</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
               <tr>
-              <th>Item</th>
-              <th>Title</th>
-              <th>Title</th>
-              <th>Title</th>
-              <th>Title</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>R763</td>
-              <td>0.159 in</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td><a class="button is-small">Request a Quote</a></td>
-            </tr>
-            <tr>
-              <td>R763</td>
-              <td>0.159 in</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td><a class="button is-small">Request a Quote</a></td>
-            </tr>
-            <tr>
-              <td>R763</td>
-              <td>0.159 in</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td>850 lb</td>
-              <td><a class="button is-small">Request a Quote</a></td>
-            </tr>
-          </tbody>
-        </table>
+                <td>R763</td>
+                <td>0.159 in</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td><a class="button is-small">Request a Quote</a></td>
+              </tr>
+              <tr>
+                <td>R763</td>
+                <td>0.159 in</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td><a class="button is-small">Request a Quote</a></td>
+              </tr>
+              <tr>
+                <td>R763</td>
+                <td>0.159 in</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td>850 lb</td>
+                <td><a class="button is-small">Request a Quote</a></td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
         </div>
       </div>
 
@@ -303,7 +304,7 @@
         </div>
       </div>
 
-      <div class="columns top margin one is-slick-carousel">
+      <div class="columns top margin one is-slick-carousel no-mobile-margins">
 
         <div class="column is-3">
   <a href="">
@@ -407,7 +408,7 @@
       <div class="columns top margin two is-centered">
         <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
-            <div class="card-image equal-height">
+            <div class="card-image equal-height zoom">
               <img src="svg/rig.svg" />
             </div>
             <div class="card-content has-text-centered black-text">
@@ -417,7 +418,7 @@
         </div>
         <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
-            <div class="card-image equal-height">
+            <div class="card-image equal-height zoom">
               <img src="svg/rig.svg" />
             </div>
             <div class="card-content has-text-centered black-text">
@@ -427,7 +428,7 @@
         </div>
         <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
-            <div class="card-image equal-height">
+            <div class="card-image equal-height zoom">
               <img src="svg/rig.svg" />
             </div>
             <div class="card-content has-text-centered black-text">
@@ -437,7 +438,7 @@
         </div>
         <div class="column is-2 has-text-centered">
           <div class="card equal-height clear-background">
-            <div class="card-image equal-height">
+            <div class="card-image equal-height zoom">
               <img src="svg/rig.svg" />
             </div>
             <div class="card-content has-text-centered black-text">
@@ -546,7 +547,9 @@
   </div>
 </div>
 </footer>
-<script type="text/javascript" src="js/jquery.sticky.js"></script> <!-- TODO: this isn't being used - remove -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="lib/main.js"></script>
 
 

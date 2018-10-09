@@ -10,16 +10,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-  <!--<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>-->
-
-<link rel="stylesheet" type="text/css" href="css/flickity.css"/>
-
   <link rel="stylesheet" href="css/main.css">
-
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+  
 </head>
 
 
@@ -41,6 +34,13 @@
     <div style="display:flex; flex-grow:1; flex-shrink:1;">
       <!-- TODO: css-ize this -->
     </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
 
     <div class="navbar-menu double is-visible-tablet has-text-centered">
 
@@ -121,11 +121,6 @@
       </div>
     </div>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
   </nav>
       </div>
     </div>
@@ -141,7 +136,7 @@
       <div class="container">
         <div class="columns">
           <div class="column is-7">
-            <div class="card top-margin-large">
+            <div class="card margin top ten mobile">
               <div class="card-content padding left none">
                 <div class="content has-text-left">
                   <nav class="breadcrumb" aria-label="breadcrumbs">
@@ -155,7 +150,7 @@
             </div>
           </div>
 
-          <div class="column is-5">
+          <div class="column is-5 top margin negative mobile">
             <div class="card top-margin-small">
               <div class="card-content">
                 <div class="field">
@@ -172,10 +167,12 @@
       </div>
     </section>
 
-  <section class="svg is-flex-desktop-only up250">
-    <img src="svg/bottom-swoosh.svg" />
-  </section>
-  <section class="default-background-image top-margin-four-mobile">
+
+    <section class="svg is-flex-desktop-only up250 bottom-swoosh">
+</section>
+
+
+  <section class="default-background-image margin top negative medium-large">
     <div class="container has-text-black">
 
       <div class="columns">
@@ -355,7 +352,7 @@
         </div>
 
       </div>
-      
+
   </section>
 
   <footer class="footer">
@@ -411,7 +408,9 @@
   </div>
 </div>
 </footer>
-<script type="text/javascript" src="js/jquery.sticky.js"></script> <!-- TODO: this isn't being used - remove -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="lib/main.js"></script>
 
 

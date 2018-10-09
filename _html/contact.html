@@ -3,7 +3,7 @@
 
   ${require('./_head.html')}
 
-  <body class="products">
+  <body class="contact">
 
     ${require('./_header.html')}
 
@@ -14,7 +14,7 @@
             <div class="card top-margin-medium">
               <div class="card-content padding left none">
                 <div class="content has-text-left">
-                  <nav class="breadcrumb margin top two" aria-label="breadcrumbs">
+                  <nav class="breadcrumb margin top six" aria-label="breadcrumbs">
                     <ul>
                       <li class="is-active is-capitalized"><a href="#" aria-current="page">Contact</a></li>
                     </ul>
@@ -37,10 +37,9 @@
       </div>
     </section>
 
-  <section class="svg is-flex-desktop-only up250">
-    <img src="svg/bottom-swoosh.svg" />
-  </section>
-  <section class="about-bg top-margin-four-mobile padding bottom six">
+  ${require('./_bottom_swoosh.html')}
+
+  <section class="contact-bg margin top negative medium-large top-margin-four-mobile">
     <div class="container has-text-black">
       <div class="columns">
         <div class="column is-9">
@@ -61,7 +60,7 @@
               (555) 123-4567
             </p>
             <p>
-              <a href="mailto: email@drives.com">email@drives.com</a>
+              <a class="darkest" href="mailto: email@drives.com">email@drives.com</a>
             </p>
           </div>
           <div class="aside-share margin top two">

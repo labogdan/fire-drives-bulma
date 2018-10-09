@@ -6573,6 +6573,9 @@ a.change-opacity:hover {
 
 h1.title.is-2 {
   font-size: 3.5rem; }
+  @media screen and (max-width: 768px) {
+    h1.title.is-2 {
+      font-size: 2.5rem; } }
 
 nav.breadcrumb ul li:first-of-type {
   margin-left: -4px;
@@ -6634,6 +6637,9 @@ a.button {
   border-radius: 0;
   transition: background 0.25s;
   font-weight: bold; }
+  @media screen and (max-width: 768px) {
+    a.button.wrap-mobile {
+      white-space: normal; } }
   a.button.is-small {
     border-radius: 0; }
   a.button:hover {
@@ -6756,6 +6762,9 @@ li::before {
 .columns .column.no-padding {
   padding: 0; }
 
+.top.margin.mobile-only {
+  margin-top: 1rem; }
+
 .top.margin.half {
   margin-top: 0.5rem; }
 
@@ -6767,6 +6776,9 @@ li::before {
 
 .top.margin.four {
   margin-top: 4rem; }
+  @media screen and (max-width: 768px) {
+    .top.margin.four.mobile-smaller {
+      margin-top: 2rem; } }
 
 .top.margin.six {
   margin-top: 6rem; }
@@ -6776,12 +6788,25 @@ li::before {
 
 .top.margin.ten {
   margin-top: 10rem; }
+  @media screen and (max-width: 768px) {
+    .top.margin.ten.mobile {
+      margin-top: 6rem; } }
 
 .top.margin.twelve {
   margin-top: 12rem; }
 
+@media screen and (max-width: 768px) {
+  .top.margin.negative.mobile {
+    margin-top: -2rem; } }
+
 .top.margin.negative.less {
   margin-top: -2rem; }
+
+.top.margin.negative.medium {
+  margin-top: -5rem; }
+
+.top.margin.negative.medium-large {
+  margin-top: -8rem; }
 
 .top.margin.negative.more {
   margin-top: -10rem; }
@@ -6791,6 +6816,9 @@ li::before {
 
 .top.padding.least {
   padding-top: 1.5rem; }
+  @media screen and (max-width: 768px) {
+    .top.padding.least.no-mobile {
+      padding-top: 0; } }
 
 .top.padding.two {
   padding-top: 2rem; }
@@ -6915,6 +6943,9 @@ li::before {
 .container .columns {
   margin-left: 1rem;
   margin-right: 1rem; }
+  .container .columns.no-mobile-margins {
+    margin-left: 0;
+    margin-right: 0; }
 
 .orange {
   color: #E17400; }
@@ -7013,8 +7044,26 @@ section.header {
 .up100 {
   margin-top: -100px; }
 
+.up120 {
+  margin-top: -120px; }
+
+.up160 {
+  margin-top: -160px; }
+
 .up250 {
   margin-top: -16rem; }
+
+svg symbol path.rig1 {
+  fill: inherit; }
+
+use.icon-general {
+  fill: #E17400; }
+
+svg.current-selection {
+  color: #E17400; }
+
+.rig {
+  color: #0a0a0a; }
 
 svg.brand.logo {
   width: 200px;
@@ -7056,7 +7105,7 @@ svg.engineering.crane {
   background-position: center top;
   z-index: 30;
   position: relative;
-  top: -132px; }
+  top: -142px; }
 
 .svg.bg-swoosh {
   background: url("../svg/header-swoosh.svg");
@@ -7119,6 +7168,11 @@ section {
 .navbar-end:first-child .navbar-item {
   text-transform: none; }
 
+.nav-opened {
+  max-height: 99vh;
+  min-height: 100vh;
+  box-shadow: none; }
+
 @media screen and (min-width: 768px) {
   .navbar-menu.double {
     flex-wrap: wrap;
@@ -7162,7 +7216,11 @@ nav.breadcrumb {
     max-width: 525px;
     background: rgba(66, 66, 71, 0.45);
     margin-top: 8rem;
-    padding: 2.4rem; }
+    padding: 2.4rem;
+    z-index: 20; }
+    @media screen and (max-width: 768px) {
+      .body-bg-image .card.opaque-bg {
+        padding: 0; } }
   .body-bg-image .card .breadcrumb a, .body-bg-image .card .breadcrumb li.is-active a {
     color: white; }
   .body-bg-image .card h1 {
@@ -7170,13 +7228,17 @@ nav.breadcrumb {
     margin-top: 0; }
 
 .home-page-background-image {
-  background: linear-gradient(to top, #424247 15%, transparent 75%, white 98%), url("https://picsum.photos/1600/?random");
-  background-size: cover;
+  background: linear-gradient(to top, #424247 18%, transparent 53%, white 70%), url("https://picsum.photos/1600/?random");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
   min-height: 500px; }
 
 .default-background-image {
-  background: linear-gradient(to top, transparent, white 98%), url("https://picsum.photos/1600/?random");
-  background-size: cover;
+  background: linear-gradient(to bottom, white 56.25vw, transparent), url("https://picsum.photos/1600/?random");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
   min-height: 500px; }
   @media screen and (max-width: 768px) {
     .default-background-image {
@@ -7195,7 +7257,7 @@ nav.breadcrumb {
   min-height: 500px; }
 
 .markets-bg {
-  background: linear-gradient(to bottom, white 56.25vw, transparent), url("../images/TKR13090298.png");
+  background: linear-gradient(to bottom, white 44vw, transparent), url("../images/TKR13090298.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -7203,6 +7265,13 @@ nav.breadcrumb {
 
 .about-bg {
   background: linear-gradient(to bottom, white 32.25vw, transparent), url("../images/TKR16050054.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  min-height: 500px; }
+
+.contact-bg {
+  background: linear-gradient(to bottom, white 12.25vw, transparent), url("../images/TKR16050054.png");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -7227,10 +7296,18 @@ nav.breadcrumb {
   background-size: cover;
   min-height: 700px; }
 
+.contact .body-bg-image {
+  background: url("https://picsum.photos/1600/?image=1044");
+  background-size: cover;
+  min-height: 600px; }
+
+.contact section:last-of-type {
+  padding-bottom: 12rem; }
+
 .products .body-bg-image {
   background: url("https://picsum.photos/1600/?image=1044");
   background-size: cover;
-  min-height: 500px; }
+  min-height: 600px; }
 
 .products section:last-of-type {
   padding-bottom: 12rem; }
@@ -7246,7 +7323,7 @@ nav.breadcrumb {
 .about .body-bg-image {
   background: url("https://picsum.photos/1600/?image=1044");
   background-size: cover;
-  min-height: 500px; }
+  min-height: 600px; }
 
 .about section:last-of-type {
   padding-bottom: 8rem; }
@@ -7258,6 +7335,14 @@ nav.breadcrumb {
   position: absolute;
   top: 3px;
   left: -10px; }
+  @media screen and (max-width: 768px) {
+    .pin-point {
+      left: -28px; } }
+
+@media screen and (max-width: 768px) {
+  .half-mobile {
+    flex: none !important;
+    width: 50% !important; } }
 
 .phone-number {
   padding-bottom: 0.4rem; }
@@ -7297,6 +7382,9 @@ nav .level-item a.link {
 a.black {
   color: #424247; }
 
+a.darkest {
+  color: #0a0a0a; }
+
 a.white {
   color: white; }
 
@@ -7327,6 +7415,8 @@ a.white {
     padding: 4rem; }
     .card.darker .card-content.more-padding {
       padding: 4rem; }
+      .card.darker .card-content.more-padding.less-mobile-padding {
+        padding: 1rem; }
     @media screen and (max-width: 768px) {
       .card.darker .card-content {
         padding: 0; } }
@@ -7462,7 +7552,15 @@ a.fa-footer {
   .up100 {
     margin-top: -3.2rem; }
   .top-margin-four-mobile {
-    margin-top: 4rem; }
+    margin-top: 4rem !important; }
+  .top-margin-six-mobile {
+    margin-top: 6rem !important; }
+  .top-margin-six-mobile {
+    margin-top: 8rem !important; }
+  .top-margin-ten-mobile {
+    margin-top: 10rem !important; }
+  .is-overflow-y {
+    overflow-y: scroll; }
   .home-page-background-image {
     background: #424247 !important;
     min-height: 500px; }
@@ -7496,6 +7594,12 @@ a.fa-footer {
 
 .card-content.black-text {
   color: #0a0a0a; }
+
+.black-text {
+  color: #0a0a0a; }
+
+.is-size-1 {
+  line-height: 1.2; }
 
 .swoosh::before {
   content: '';

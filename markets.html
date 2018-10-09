@@ -10,16 +10,9 @@
 
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
-  <!--<link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>-->
-
-<link rel="stylesheet" type="text/css" href="css/flickity.css"/>
-
   <link rel="stylesheet" href="css/main.css">
-
   <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
-  <script   src="https://code.jquery.com/jquery-3.3.1.js"   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/slick.min.js"></script>
-  <script type="text/javascript" src="js/flickity.pkgd.min.js"></script>
+  
 </head>
 
 
@@ -41,6 +34,13 @@
     <div style="display:flex; flex-grow:1; flex-shrink:1;">
       <!-- TODO: css-ize this -->
     </div>
+
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+
 
     <div class="navbar-menu double is-visible-tablet has-text-centered">
 
@@ -121,11 +121,6 @@
       </div>
     </div>
 
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
   </nav>
       </div>
     </div>
@@ -157,8 +152,8 @@
   <div class="card equal-height clear-background">
     <div align="center" class="card-image equal-height">
       <a class="current-nav-item">
-      <svg class="navigation rig zoom" role="img">
-        <use xlink:href="svg/svg-sprites.svg#rig"></use>
+      <svg class="navigation rig zoom current-selection">
+        <use class="icon-general" xlink:href="svg/svg-sprites.svg#rig"></use>
       </svg>
       </a>
     </div>
@@ -277,8 +272,6 @@
 </div>
 
       </div>
-
-
 
       <div class="columns top-margin-large is-centered">
         <div class="column is-8">
@@ -430,10 +423,10 @@
 
         <div class="column is-2-3 zoom">
   <a href="">
-  <figure class="image is-4by5 has-border">
+  <figure class="image is-4by5 has-border margin top mobile-only">
     <img src="images/homepage-case-1.png">
   </figure>
-  <p class="top padding least orange">
+  <p class="top padding least no-mobile orange">
     Technical Document Title
   </p>
 </a>
@@ -441,10 +434,10 @@
 
         <div class="column is-2-3 zoom">
   <a href="">
-  <figure class="image is-4by5 has-border">
+  <figure class="image is-4by5 has-border margin top mobile-only">
     <img src="images/homepage-case-2.png">
   </figure>
-  <p class="top padding least orange">
+  <p class="top padding least no-mobile orange">
     Technical Document Title
   </p>
 </a>
@@ -452,10 +445,10 @@
 
         <div class="column is-2-3 zoom">
   <a href="">
-  <figure class="image is-4by5 has-border">
+  <figure class="image is-4by5 has-border margin top mobile-only">
     <img src="images/homepage-case-1.png">
   </figure>
-  <p class="top padding least orange">
+  <p class="top padding least no-mobile orange">
     Technical Document Title
   </p>
 </a>
@@ -463,10 +456,10 @@
 
         <div class="column is-2-3 zoom">
   <a href="">
-  <figure class="image is-4by5 has-border">
+  <figure class="image is-4by5 has-border margin top mobile-only">
     <img src="images/homepage-case-2.png">
   </figure>
-  <p class="top padding least orange">
+  <p class="top padding least no-mobile orange">
     Technical Document Title
   </p>
 </a>
@@ -474,10 +467,10 @@
 
         <div class="column is-2-3 zoom">
   <a href="">
-  <figure class="image is-4by5 has-border">
+  <figure class="image is-4by5 has-border margin top mobile-only">
     <img src="images/homepage-case-2.png">
   </figure>
-  <p class="top padding least orange">
+  <p class="top padding least no-mobile orange">
     Technical Document Title
   </p>
 </a>
@@ -491,7 +484,7 @@
         </div>
       </div>
 
-      <div class="columns top margin two is-slick-carousel">
+      <div class="columns top margin two is-slick-carousel no-mobile-margins">
 
         <div class="column is-3">
   <a href="">
@@ -612,8 +605,8 @@
   <div class="card equal-height clear-background">
     <div align="center" class="card-image equal-height">
       <a class="current-nav-item">
-      <svg class="navigation rig zoom" role="img">
-        <use xlink:href="svg/svg-sprites.svg#rig"></use>
+      <svg class="navigation rig zoom current-selection">
+        <use class="icon-general" xlink:href="svg/svg-sprites.svg#rig"></use>
       </svg>
       </a>
     </div>
@@ -792,7 +785,9 @@
   </div>
 </div>
 </footer>
-<script type="text/javascript" src="js/jquery.sticky.js"></script> <!-- TODO: this isn't being used - remove -->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/slick.min.js"></script>
 <script type="text/javascript" src="lib/main.js"></script>
 
 
