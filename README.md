@@ -5,7 +5,7 @@ This is a small package built from Bulma Start, and modified for Drives
 ## Install
 
 ```sh
-npm install bulma-start
+npm install
 ```
 _then_
 
