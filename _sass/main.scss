@@ -233,6 +233,22 @@ nav.breadcrumb ul li:first-of-type {
   }
 }
 
+.slick-arrow-invisible {
+  top: 0;
+  position: absolute;
+  z-index: 40;
+  &.left {
+    left: 0;
+    height: 100%;
+    width: 45px;
+  }
+  &.right {
+    right: 0;
+    height: 100%;
+    width: 45px;
+  }
+}
+
 .is-slick-history-bottom {
   margin-top: 8px;
 }
@@ -1101,7 +1117,17 @@ nav.breadcrumb {
 }
 
 .markets-bg {
-  @include backgroundImageGradient("../images/TKR13090298.png", 44vw)
+  @include mobile {
+    background-size: 120% auto !important;
+    @include backgroundImageGradient("../images/TKR13090298.png", 85%)
+  }
+  @include tablet {
+    background-size: 120% auto !important;
+    @include backgroundImageGradient("../images/TKR13090298.png", 65%)
+  }
+  @include desktop {
+    @include backgroundImageGradient("../images/TKR13090298.png", 44vw)
+  }
 }
 
 .about-bg {

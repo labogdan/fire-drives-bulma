@@ -21,7 +21,8 @@
     "postcss-cli": "^4.1.1"
   },
   "scripts": {
-    "compile": "html-includes --src _html --dest . --watch",
+    "html-watch": "html-includes --src _html --dest . --watch",
+    "html-build": "html-includes --src _html --dest .",
     "css-deploy": "npm run css-build && npm run css-postcss",
     "css-build": "node-sass _sass/main.scss css/main.css",
     "css-postcss": "postcss --use autoprefixer --output css/main.css css/main.css",
@@ -29,7 +30,8 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm run css-watch | npm run js-watch | npm run compile"
+    "start": "npm run css-watch | npm run js-watch | npm run compile",
+    "build-all": "npm run css-deploy | npm run js-build | npm run html-build"
   },
   "dependencies": {
     "bourbon": "^5.1.0"
