@@ -12,4 +12,4 @@ _gh_pages
 _site
 node_modules
 css/main.css
-js
+js/main.js
